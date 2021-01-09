@@ -1,0 +1,7 @@
+C:\Users\Aurora_Boreas\source\repos\csharp_2021_project\fileIO\bin\Debug\fileIO.exe.config
+C:\Users\Aurora_Boreas\source\repos\csharp_2021_project\fileIO\bin\Debug\fileIO.exe
+C:\Users\Aurora_Boreas\source\repos\csharp_2021_project\fileIO\bin\Debug\fileIO.pdb
+C:\Users\Aurora_Boreas\source\repos\csharp_2021_project\fileIO\obj\Debug\fileIO.csprojAssemblyReference.cache
+C:\Users\Aurora_Boreas\source\repos\csharp_2021_project\fileIO\obj\Debug\fileIO.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\csharp_2021_project\fileIO\obj\Debug\fileIO.exe
+C:\Users\Aurora_Boreas\source\repos\csharp_2021_project\fileIO\obj\Debug\fileIO.pdb
