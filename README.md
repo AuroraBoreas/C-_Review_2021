@@ -2,4 +2,6 @@
 
 core language
 
+seems easy after C/C++
+
 revisit
