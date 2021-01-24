@@ -1,0 +1,13 @@
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\bin\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.exe
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\bin\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.deps.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\bin\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\bin\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\bin\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\bin\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\obj\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.csprojAssemblyReference.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\obj\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\obj\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\obj\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\obj\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\obj\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_06_OOP_part02\obj\Debug\netcoreapp3.1\LCSOD_06_OOP_part02.genruntimeconfig.cache
