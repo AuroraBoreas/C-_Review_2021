@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Staff
 {
@@ -57,5 +58,43 @@ public class Staff
 	public override string ToString()
     {
 		return ($"name of staff = {m_name}, hourlyRate = {m_hourlyRate}, hourWorked = {m_hWorked}.");
+    }
+
+	public int[] generateArray(int n)
+    {
+		if(n < 1)
+		{ throw new ArgumentException("n must be >= 1"); }
+
+		int[] tmp = new int[n];
+		Random rnd = new Random();
+		for(int i=0; i < n; ++i)
+        {
+			tmp[i] = rnd.Next();
+        }
+
+		return tmp;
+    }
+
+	public List<int> generateList(int n)
+    {
+		if(n < 1)
+		{ throw new ArgumentException("n Must be >= 1"); }
+
+		List<int> tmp = new List<int>();
+		Random rnd = new Random();
+
+		for(int i=0; i < n; ++i)
+        {
+			tmp.Add(rnd.Next(0, 101));
+        }
+
+		return tmp;
+    }
+
+	public void printNames(params string[] names)
+    {
+		for(int i=0; i < names.Length; ++i)
+		{ Console.Write(names[i] + " ");  }
+		Console.WriteLine();
     }
 }
