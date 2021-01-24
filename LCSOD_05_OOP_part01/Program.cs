@@ -68,6 +68,8 @@ namespace LCSOD_05_OOP_part01
                 // containers like array, list will be passed by Ref
                 // reviewed. skip
             }
+
+            Console.ReadKey();
         }
     }
 }
