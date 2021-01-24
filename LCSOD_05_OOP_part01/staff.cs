@@ -7,6 +7,11 @@ public class Staff
 	private const int m_hourlyRate = 30;
 	private int m_hWorked;
 
+	// static members
+	public static string msg = "love and peace";
+	public static int year = 2021;
+	public static decimal pi = 3.14m;
+
 	// constructors
 	public Staff(string name, int workHour)
 	{

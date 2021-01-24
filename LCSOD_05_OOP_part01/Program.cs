@@ -30,6 +30,9 @@ namespace LCSOD_05_OOP_part01
             int j = 0;
             while(j < arr2.Count)
             { Console.WriteLine(arr2[j].calculatePay()); ++j; }
+
+
+            Console.WriteLine($"{Staff.msg}, {Staff.year}, {Staff.pi}");
         }
     }
 }
