@@ -1,0 +1,13 @@
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\bin\Debug\netcoreapp3.1\LCSOD_08_LINQ.exe
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\bin\Debug\netcoreapp3.1\LCSOD_08_LINQ.deps.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\bin\Debug\netcoreapp3.1\LCSOD_08_LINQ.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\bin\Debug\netcoreapp3.1\LCSOD_08_LINQ.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\bin\Debug\netcoreapp3.1\LCSOD_08_LINQ.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\bin\Debug\netcoreapp3.1\LCSOD_08_LINQ.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\obj\Debug\netcoreapp3.1\LCSOD_08_LINQ.csprojAssemblyReference.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\obj\Debug\netcoreapp3.1\LCSOD_08_LINQ.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\obj\Debug\netcoreapp3.1\LCSOD_08_LINQ.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\obj\Debug\netcoreapp3.1\LCSOD_08_LINQ.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\obj\Debug\netcoreapp3.1\LCSOD_08_LINQ.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\obj\Debug\netcoreapp3.1\LCSOD_08_LINQ.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_08_LINQ\obj\Debug\netcoreapp3.1\LCSOD_08_LINQ.genruntimeconfig.cache
