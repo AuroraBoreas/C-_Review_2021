@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "LCSOD_07_Enum_Struct/1.0.0": {
+        "runtime": {
+          "LCSOD_07_Enum_Struct.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LCSOD_07_Enum_Struct/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

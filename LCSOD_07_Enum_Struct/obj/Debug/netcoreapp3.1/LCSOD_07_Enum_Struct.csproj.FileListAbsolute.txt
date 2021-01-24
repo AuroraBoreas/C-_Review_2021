@@ -1,0 +1,12 @@
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\bin\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.exe
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\bin\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.deps.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\bin\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\bin\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\bin\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\bin\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\obj\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\obj\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\obj\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\obj\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\obj\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_07_Enum_Struct\obj\Debug\netcoreapp3.1\LCSOD_07_Enum_Struct.genruntimeconfig.cache
