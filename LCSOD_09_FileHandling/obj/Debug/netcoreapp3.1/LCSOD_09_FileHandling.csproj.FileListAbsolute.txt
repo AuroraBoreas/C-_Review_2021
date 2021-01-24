@@ -1,0 +1,12 @@
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\bin\Debug\netcoreapp3.1\LCSOD_09_FileHandling.exe
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\bin\Debug\netcoreapp3.1\LCSOD_09_FileHandling.deps.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\bin\Debug\netcoreapp3.1\LCSOD_09_FileHandling.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\bin\Debug\netcoreapp3.1\LCSOD_09_FileHandling.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\bin\Debug\netcoreapp3.1\LCSOD_09_FileHandling.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\bin\Debug\netcoreapp3.1\LCSOD_09_FileHandling.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\obj\Debug\netcoreapp3.1\LCSOD_09_FileHandling.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\obj\Debug\netcoreapp3.1\LCSOD_09_FileHandling.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\obj\Debug\netcoreapp3.1\LCSOD_09_FileHandling.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\obj\Debug\netcoreapp3.1\LCSOD_09_FileHandling.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\obj\Debug\netcoreapp3.1\LCSOD_09_FileHandling.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_09_FileHandling\obj\Debug\netcoreapp3.1\LCSOD_09_FileHandling.genruntimeconfig.cache
