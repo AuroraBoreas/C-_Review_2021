@@ -1,0 +1,13 @@
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\bin\Debug\netcoreapp3.1\LCSOD_04_make_decisions.exe
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\bin\Debug\netcoreapp3.1\LCSOD_04_make_decisions.deps.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\bin\Debug\netcoreapp3.1\LCSOD_04_make_decisions.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\bin\Debug\netcoreapp3.1\LCSOD_04_make_decisions.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\bin\Debug\netcoreapp3.1\LCSOD_04_make_decisions.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\bin\Debug\netcoreapp3.1\LCSOD_04_make_decisions.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\obj\Debug\netcoreapp3.1\LCSOD_04_make_decisions.csprojAssemblyReference.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\obj\Debug\netcoreapp3.1\LCSOD_04_make_decisions.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\obj\Debug\netcoreapp3.1\LCSOD_04_make_decisions.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\obj\Debug\netcoreapp3.1\LCSOD_04_make_decisions.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\obj\Debug\netcoreapp3.1\LCSOD_04_make_decisions.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\obj\Debug\netcoreapp3.1\LCSOD_04_make_decisions.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_04_make_decisions\obj\Debug\netcoreapp3.1\LCSOD_04_make_decisions.genruntimeconfig.cache

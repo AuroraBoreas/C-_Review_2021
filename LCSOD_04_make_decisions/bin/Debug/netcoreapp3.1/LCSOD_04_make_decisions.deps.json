@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "LCSOD_04_make_decisions/1.0.0": {
+        "runtime": {
+          "LCSOD_04_make_decisions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LCSOD_04_make_decisions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
