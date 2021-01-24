@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LCSOD_02_arrays_strings_lists
 {
@@ -137,6 +138,47 @@ namespace LCSOD_02_arrays_strings_lists
 
             }
 
+
+            // list
+            {
+                /*
+                + what: a container stores unknown numbers of elements.
+                + why: why not?
+                + how: as follows
+
+                it is much closer to array. but more flexible
+                
+                + header file: using System.Collections.Generic;
+                */
+                List<int> numbers = new List<int>(); // constructor
+                numbers = new List<int> { 3, 4, 5, 7, 10 };
+                for(int i=0; i < numbers.Count; ++i)
+                { display($"{numbers[i]}"); }
+
+                // add. O(1)
+                numbers.Add(13);
+
+                // length
+                display(numbers.Count.ToString());
+
+                // Insert. O(n)
+                numbers.Insert(1, 15);
+
+                // remove
+                numbers.Remove(15);
+
+                // removeat
+                numbers.RemoveAt(0);
+
+                // Contain
+                numbers.Contains(100);
+
+                // clear
+                numbers.Clear();
+
+
+
+            }
         }
     }
 }
