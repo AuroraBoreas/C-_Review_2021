@@ -19,6 +19,7 @@ public class Staff
 		m_name = $"{firstName} {lastName}";
 		m_hWorked = workHour;
     }
+	// no destructor?
 
 	// getter; setter;
 	public int HourWorked
@@ -28,7 +29,7 @@ public class Staff
 	{ get; set; }
 
 	// display
-	public void printMessage()
+	private void printMessage()
     {
 		Console.WriteLine("Calculating Pay...");
     }
