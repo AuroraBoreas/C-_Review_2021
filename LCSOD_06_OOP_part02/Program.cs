@@ -40,7 +40,63 @@ namespace LCSOD_06_OOP_part02
 
             // abstraction
             {
+                /*
+                ABS(abstract class)
+                
+                + in C++, sytanx:
+                    class ClsName
+                    {
+                        private:
+                            // data members
+                            // ...
+                        public:
+                            // constructors
+                            // data methods
+                            virtual void print(void) = 0;   // using = 1 to declare the Class is abstract class. at least 1.
+                            // ...
+                    };
+                
+                    // u cant create obj of abs class in C++
+                 
+                + in C#, syntax:
+                    abstract class ClsName
+                    {
+                        // data members
+                        // ...
+                        // constructors
+                        // ...
+                        // abstract void print();
+                        // ...
+                    }
+                    
+                    // u cant create obj of abs class in C# as well
+                    // good consistency thou
 
+                    // see "abs.cs" and "drivedCls.cs"
+                */
+
+                //MyClass mc1 = new MyClass(); // not OK. compiler complains
+            }
+
+            // interface
+            {
+                // in C++, there is no such conception. but it can be implemented through abstract class
+                // see "IShape.cs"
+            }
+
+            // access modifiers in C#
+            {
+                /*
+                + in C++, access modifiers: private, public, protected, friend
+
+                + in C#, access modifiers: private, public, protected, internal
+                    - wtf is "internal"?
+                    link: [https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers]
+                    answer: The type or member can be accessed by any code in the same assembly, but not from another assembly.
+                 
+                */
+
+                var myBase = new InternalBaseClass(); // OK?
             }
         }
     }
