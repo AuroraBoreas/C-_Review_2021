@@ -8,6 +8,11 @@ namespace LCSOD_02_arrays_strings_lists
         static void display(string s)
         { Console.WriteLine(s); }
 
+        static int add_one(int x)
+        { return ++x; }
+        static void add_one(ref int x)
+        { x++; }
+
         static void Main(string[] args)
         {
             // array
@@ -175,9 +180,21 @@ namespace LCSOD_02_arrays_strings_lists
 
                 // clear
                 numbers.Clear();
+            }
 
+            {
+                /*
+                + what: Ref, V, P(N/A)
+                + why: why not?
+                + how: as follows
+                 
+                */
 
-
+                int x1 = 42;
+                int x2 = add_one(x1);
+                display(x1.ToString()); // 42
+                add_one(ref x1); // passing args by ref
+                display(x1.ToString()); // 43
             }
         }
     }
