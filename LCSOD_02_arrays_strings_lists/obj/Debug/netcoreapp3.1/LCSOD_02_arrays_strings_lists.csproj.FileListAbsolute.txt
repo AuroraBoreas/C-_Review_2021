@@ -1,0 +1,13 @@
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\bin\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.exe
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\bin\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.deps.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\bin\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\bin\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\bin\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\bin\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\obj\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\obj\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\obj\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\obj\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\obj\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\obj\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.genruntimeconfig.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_02_arrays_strings_lists\obj\Debug\netcoreapp3.1\LCSOD_02_arrays_strings_lists.csprojAssemblyReference.cache
