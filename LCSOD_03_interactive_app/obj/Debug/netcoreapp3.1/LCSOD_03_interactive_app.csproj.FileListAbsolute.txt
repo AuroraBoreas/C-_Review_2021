@@ -1,0 +1,12 @@
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\bin\Debug\netcoreapp3.1\LCSOD_03_interactive_app.exe
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\bin\Debug\netcoreapp3.1\LCSOD_03_interactive_app.deps.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\bin\Debug\netcoreapp3.1\LCSOD_03_interactive_app.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\bin\Debug\netcoreapp3.1\LCSOD_03_interactive_app.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\bin\Debug\netcoreapp3.1\LCSOD_03_interactive_app.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\bin\Debug\netcoreapp3.1\LCSOD_03_interactive_app.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\obj\Debug\netcoreapp3.1\LCSOD_03_interactive_app.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\obj\Debug\netcoreapp3.1\LCSOD_03_interactive_app.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\obj\Debug\netcoreapp3.1\LCSOD_03_interactive_app.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\obj\Debug\netcoreapp3.1\LCSOD_03_interactive_app.dll
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\obj\Debug\netcoreapp3.1\LCSOD_03_interactive_app.pdb
+C:\Users\Aurora_Boreas\source\repos\LCSOD_03_interactive_app\obj\Debug\netcoreapp3.1\LCSOD_03_interactive_app.genruntimeconfig.cache

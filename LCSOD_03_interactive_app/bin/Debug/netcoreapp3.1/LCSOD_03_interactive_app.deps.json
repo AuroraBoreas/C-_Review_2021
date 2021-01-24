@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "LCSOD_03_interactive_app/1.0.0": {
+        "runtime": {
+          "LCSOD_03_interactive_app.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LCSOD_03_interactive_app/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
