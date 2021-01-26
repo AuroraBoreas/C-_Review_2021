@@ -187,9 +187,17 @@ namespace Pilosohpy
 
             // members of numerical data types
             {
+                // cls hierarchy of CTS on P131
+
                 dataTypeFunctionality();
             }
 
+            // boolean
+            {
+                // boolean does not support MinValue/MaxValue properties but
+                boolFalseTrueString();
+                System.Console.ReadLine();
+            }
 
 
 
@@ -311,6 +319,13 @@ namespace Pilosohpy
             System.Console.WriteLine("double.NegativeInfinity: {0}", double.NegativeInfinity);
 
             System.Console.ReadLine();
+        }
+
+        private static void boolFalseTrueString()
+        {
+            System.Console.WriteLine("bool.FalseString: {0}", bool.FalseString);
+            System.Console.WriteLine("bool.TrueString: {0}", bool.TrueString);
+
         }
     }
 }
