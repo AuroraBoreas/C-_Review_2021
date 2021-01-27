@@ -1,3 +1,6 @@
+using System;
+using System.Numerics; // for BigIntegers
+
 // ancm?
 
 namespace Pilosohpy
@@ -7,9 +10,7 @@ namespace Pilosohpy
         static int Main(string[] args)
         {
             /*
-
             terminology
-
             + why: Uniform and generalize all languages(C++, VB, C#, F#) in .NET
             + compilation pattern:
                 src code -> .NET compilers -> IL(assemblies) -> machine code
@@ -18,7 +19,6 @@ namespace Pilosohpy
                 CLS: common language specifications
                 mscorlib.dll
                 mscoree.dll
-
             + Object Viewer, ildasm.exe
                 - shortcut: VS console -> ildasm
             + more details on paper notebook
@@ -36,7 +36,6 @@ namespace Pilosohpy
                     SystemDirectory
                     UserName
                     Version
-
                 */
 
                 showEnvironmentInfo();
@@ -47,23 +46,18 @@ namespace Pilosohpy
             // System.Console cls
             {
                 /*
-
                 + selected properties
                     - beep()
                     - clear()
-
                     - backgroundcolor
                     - foregroundcolor
                     - bufferweight
                     - bufferheight
-
                     - title
                     - windowheight
                     - windowwidth
                     - windowtop
                     - windowleft
-
-
                 */
 
                 Console.WriteLine("**** Basic I/O ****");
@@ -71,7 +65,6 @@ namespace Pilosohpy
                 Console.ReadLine();
                 /*
                 VS C# code snippet
-
                 #helloworld
                 ~
                 cclear
@@ -129,7 +122,6 @@ namespace Pilosohpy
                 tryf
                 using
                 while
-
                 */
 
 
@@ -138,11 +130,8 @@ namespace Pilosohpy
             // string interpolation, formatting
             {
                 /*
-
                 + formatting numeric data
-
                     .NET numeric format characters
-
                     C or c  -> currency
                     D or d  -> digit
                     E or e  -> scientific exp
@@ -170,9 +159,7 @@ namespace Pilosohpy
             // intrinsic datatype and new operator
             {
                 /*
-
                 + all intrinsic data types support what is known as default constructor. this allows u to create a var using new keyword, which automatically sets the var to its default value
-
                     - bool          -> false
                     - numeric       -> 0 or 0.0
                     - char          -> ''
@@ -180,7 +167,6 @@ namespace Pilosohpy
                     - DateTime      -> 1/1/0001 12:00:00AM
                     - Obj           -> null
                     - String        -> null
-
                 */
                 objectFunctionality();
             }
@@ -199,7 +185,35 @@ namespace Pilosohpy
                 System.Console.ReadLine();
             }
 
+            // System.Char, P133
+            {
+                charFunctionality()
 
+                Console.ReadLine();
+            }
+
+            // Parsing values from string data, P134
+            {
+                parseFromString();
+
+                Console.ReadLine();
+            }
+
+            // T.TryParse()
+            {
+                parseFromStringsWithTryParse();
+
+                Console.ReadLine();
+                
+            }
+
+            // System.DateTime cls, System.TimeSpan cls
+            {
+                userDatesAndTimes();
+
+                Console.ReadLine();
+
+            }
 
             return 0;
         }
@@ -325,6 +339,90 @@ namespace Pilosohpy
         {
             System.Console.WriteLine("bool.FalseString: {0}", bool.FalseString);
             System.Console.WriteLine("bool.TrueString: {0}", bool.TrueString);
+
+        }
+
+        private static void charFunctionality()
+        {
+            System.Console.WriteLine("=> char type functionality:");
+            char myChar = 'a';
+            System.Console.WriteLine($"char.IsDigit({myChar}): {char.isDigit(myChar)}");
+            System.Console.WriteLine($"char.IsLetter({myChar}): {char.IsLetter(myChar)}");
+            
+            myChar = 'hello world';
+            System.Console.WriteLine($"char.IsWhiteSpace({myChar}, 5): {char.IsWhiteSpace(myChar, 5)}");
+            System.Console.WriteLine($"char.IsWhiteSpace({myChar}, 6): {char.IsWhiteSpace(myChar, 6)}");
+            System.Console.WriteLine($"char.isPunctuation({'?'}): {char.isPunctuation('?')}");
+
+            System.Console.WriteLine();
+
+        }
+
+        private static void parseFromString()
+        {
+            System.Console.WriteLine("=> Data Type parsing:");
+            bool b = bool.Parse("True");
+            System.Console.WriteLine($"value of b: {b}");
+
+            double d = double.Parse("99.84");
+            System.Console.WriteLine($"value of d: {d}");
+
+            int i = int.Parse("8");
+            System.Console.WriteLine($"value of i: {i}");
+
+
+            // note the uppercase of Char
+            char c = Char.Parse("w");
+            System.Console.WriteLine($"value of c: {c}");
+
+        }
+
+        private static void parseFromStringsWithTryParse()
+        {
+            System.Console.WriteLine("=> Data Type Parsing with TryParse:");
+            
+            if(boo.TryParse("True", out bool b))
+            {
+                System.Console.WriteLine($"value of b: {b}");
+            }
+
+            string s = "hello";
+            if(double.TryParse(s, out double d))
+            {
+                System.Console.WriteLine($"value of d: {d}");
+            }
+            else
+            {
+                System.Console.WriteLine($"Failed to convert the input ({s}) to a double");
+            }
+        }
+
+        private static void userDatesAndTimes()
+        {
+            System.Console.WriteLine("=> Dates and Times:");
+
+            // datetime constructor
+            DateTime dt = new DateTime(2021, 10, 17);
+
+            // day?
+            System.Console.WriteLine($"the day of {dt.Date} is {dt.DayOfWeek}");
+
+            // month?
+            dt = dt.AddMonth(2);
+            System.Console.WriteLine($"Daylight savings: {dt.isDayLightSavingTime()}");
+
+            // time constructor
+            TimeSpan ts = new TimeSpan(4, 30, 0);
+            System.Console.WriteLine(ts);
+
+            // time difference: t1 - t2
+            System.Console.WriteLine(ts.Subtract(new TimeSpan(0, 15, 0)));
+
+        }
+
+
+        private static void BigIntegerDemo()
+        {
 
         }
     }
