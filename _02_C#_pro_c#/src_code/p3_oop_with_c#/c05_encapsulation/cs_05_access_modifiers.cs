@@ -11,7 +11,7 @@ namespace Access_Modifiers
             private int m_age;
 
             Public Person(string name)
-            : this(name, 1)         // why the fuck are u complaining? me nothing wrong
+            // : this(name, 1)         // why the fuck are u complaining? me nothing wrong
             {}
 
             public Person(int age)
