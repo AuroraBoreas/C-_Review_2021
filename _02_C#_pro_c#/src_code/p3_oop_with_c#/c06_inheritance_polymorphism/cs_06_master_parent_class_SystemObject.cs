@@ -138,6 +138,13 @@ namespace Master_Parent
                 // see class Person, GetHashCode()
             }
 
+            //  using static methods of System.Object
+            {
+                // Equals()
+                // ReferenceEquals()
+                // explored alrdy during study over "know when to use new or override keyword in C#"
+
+            }
 
             return 0;
         }
