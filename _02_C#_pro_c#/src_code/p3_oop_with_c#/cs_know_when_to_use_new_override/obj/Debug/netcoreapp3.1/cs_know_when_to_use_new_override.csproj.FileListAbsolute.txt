@@ -1,0 +1,12 @@
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\bin\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.exe
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\bin\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.deps.json
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\bin\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.runtimeconfig.json
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\bin\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.runtimeconfig.dev.json
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\bin\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.dll
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\bin\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.pdb
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.AssemblyInfoInputs.cache
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.AssemblyInfo.cs
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.dll
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.pdb
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.genruntimeconfig.cache

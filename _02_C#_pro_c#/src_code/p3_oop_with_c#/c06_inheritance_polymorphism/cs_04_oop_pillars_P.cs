@@ -135,10 +135,8 @@ namespace OOP_Pillars
             {
                 // using override kw to explicitly override virtual methods of base class
                 /*
-
                 + mechnism:
                     - same with override in C++ >= 11
-
                 */
                 FuckEmployeeClassHierarchy();
             }
@@ -146,10 +144,8 @@ namespace OOP_Pillars
             // sealing virtual members using sealed kw
             {
                 /*
-
                 + mechnism:
                     - same with final in c++ >= 11
-
                 */
 
             }
@@ -157,27 +153,21 @@ namespace OOP_Pillars
             // abc
             {
                 /*
-
                 + mechnism:
                     - same with abc in C++
                     - virtual methods have declaration only, defnition is set to =0;
                     - can't initialized and create obj
                     - methods marked with abstract are pure protocol
-
                     + c# uniqueness
                         - derived classes are NEVER required to override virtual methods
                         - to force each derived classes to override using abstract kw to define methods
                         - if derived classes are not override abstract methods, they are noncreatable abstract type that MUST be adorned with the abstract kw
-
                     + shared
                         - abstract members do not provide any implementation like c++
                         - abstract methods can only be defined in abc (both true in c++ and c#)
-
                 + Base or Interface
                     - Top-down design and creation, what u see is inheritance and polymorphism
                     - after creation, what u see is derived classes share Interface
-
-
                 */
                 FuckWithPolymorphism();
             }
@@ -185,16 +175,11 @@ namespace OOP_Pillars
             // member shadowing, P297
             {
                 /*
-
                 + mechnism
                     - same with c++
-
                     - c# uniqueness:
                         - using new kw to hide any implementation above
                         - can apply new kw to any member type inherited
-
-
-
                 */
             }
 
