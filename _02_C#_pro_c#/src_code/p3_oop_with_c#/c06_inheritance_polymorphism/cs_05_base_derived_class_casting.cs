@@ -134,7 +134,10 @@ namespace Casting_Rule
 
             // pattern matching revisit
             {
-
+                // see GivePromtion();
+                // see GivePromtion_is();
+                // see GivePromtion_wo_pattern_match();
+                // see GivePromtion_with_pattern_match();
 
             }
 
