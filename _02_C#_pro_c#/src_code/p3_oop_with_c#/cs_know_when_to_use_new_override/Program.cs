@@ -74,13 +74,13 @@ namespace cs_know_when_to_use_new_override
             
             conclusion:
             - new is used to explicitly hide implementation above and suppress compiler warning.
-              but u can still access the original method by upcasting to the base class type (dangerous)
+              but u can still access the original method by upcasting to the base class type
 
             - override may pair with virtual, and MUST be used on abstract methods; is used to achieve polymorphism via v-table.
-              but u can NEVER access the original method by upcasting to the base class type
+              but u can never Access the original method by upcasting to the base class type
              
             */
-
+            Console.WriteLine($"dc == bcdc? : {Object.Equals(dc, bcdc)}"); 
             Console.WriteLine();
         }
     }

@@ -10,3 +10,4 @@ C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\n
 C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.dll
 C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.pdb
 C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.genruntimeconfig.cache
+C:\Users\Aurora_Boreas\source\repos\cs_know_when_to_use_new_override\obj\Debug\netcoreapp3.1\cs_know_when_to_use_new_override.csprojAssemblyReference.cache
