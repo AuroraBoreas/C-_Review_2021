@@ -1,8 +1,7 @@
 using System;
 
-namespace Application_Level_Exception
+namespace Multiple_Exceptions
 {
-
     class Radio
     {
         public void TurnOn(bool on)
@@ -10,44 +9,6 @@ namespace Application_Level_Exception
             System.Console.WriteLine(on? "Jamming...": "Quiet time...");
         }
     }
-
-    // class CarIsDeadException: ApplicationException  // version 0
-    // {
-    //     private string messageDetails = string.Empty;
-    //     public DateTime ErrorTimeStamp{get; set;}
-    //     public string CauseOfError { get; set; }
-        
-    //     public CarIsDeadException(){}
-    //     public CarIsDeadException(string msg, string cause, DateTime time)
-    //     {
-    //         messageDetails = msg;
-    //         CauseOfError = cause;
-    //         ErrorTimeStamp = time;
-    //     }
-
-    //     // override Exception.Message props
-    //     public override string Message => $"Car Error Message: {messageDetails}";
-        
-    // }
-    // class CarIsDeadException: ApplicationException  // version 1
-    // {
-    //     // private string messageDetails = string.Empty;
-    //     public DateTime ErrorTimeStamp{get; set;}
-    //     public string CauseOfError { get; set; }
-        
-    //     public CarIsDeadException(){}
-    //     public CarIsDeadException(string msg, string cause, DateTime time)
-    //     : base(msg)
-    //     {
-    //         // messageDetails = msg;
-    //         CauseOfError = cause;
-    //         ErrorTimeStamp = time;
-    //     }
-
-    //     // override Exception.Message props
-    //     // public override string Message => $"Car Error Message: {messageDetails}";
-        
-    // }
 
     class CarIsDeadException: ApplicationException  // version 2
     {
@@ -99,6 +60,10 @@ namespace Application_Level_Exception
 
         public void Accelerate(int delta)
         {
+            // test arg before processing
+            if(delta < 0)
+            { throw new ArgumentException("delta", "Speed MUST be > 0!"); }
+
             if(carIsDead)
             { System.Console.WriteLine($"{PetName} is out of order.."); }
             else
@@ -127,66 +92,46 @@ namespace Application_Level_Exception
 
     }
 
-    class Porgram
+    class Program
     {
 
         static int Main(string[] args)
         {
-            // System.ApplicationException, Take 1, P325
+            // Multiple Exception Processing, P332
             {
                 /*
                 
-                + custom your own Exception
-                    - derive from System.Exception; OK
-                    - derive from System.ApplicationException; YES
-                
-                + purpose
-                    - functionally, the only purpose of System.AppliationException is to 
-                      identify the source of the error;
-                    - u can assume the exception was raised by the codebase of the executing application, rather than by the .NET base class libraries runtime engine
-                
-                */
+                + the rule of thumb, always keep in mind
+                    - make sure your catch blocks are structured such that the first catch is the most specific excpetion;
+                    - leaving the final catch for the most general;
+                      just like: .oO0O
 
-                SimpleExceptionExample_custom_exception();
-            }
-
-            // System.ApplicationException, Take 2, P328
-            {
-                // irl, u don't override Message prop
-                // rather than passing it to base class: ApplicationException
-
-                /*
-                + why?
-
-                  - many times, cutom Exception class is NOT necessarily to provide additional functionality beyond what is inherited from the   
-                    base classes, BUT to supply a "strongly named type" that crystal-clearly identifies the nature of the error;
-
-                  - then client can provide different handler logic for different types of exceptions;
-                
-                */                
-
-            }
-
-            // System.ApplicationException, Take 3, P329
-            {
-                /*
-                
-                + to build a truly prim-and-proper custom exception class, u MUST adhere to .NET bast practices
-                    - Derives from Exception/AppliationException
-                    - Is marked with the [System.Serializable] attribute
-                    - Defines a default constructor
-                    - Defines a ctor that sets the inherited Message prop
-                    - Defines a ctor that handler "inner exception"
-                    - Defines a ctor to handle the serialization of your type
                 
                 */ 
+                HandleMultipleException();
+            }
+
+            // General catch statement
+            {
+                HandleMultipleException2();
+
+            }
+
+            // rethrow Exceptions, P334
+            {
+                // same concept in c++
+                HandleMultipleException3();
+            }
+
+            // inner Exception
+            {
 
             }
 
             return 0;
         }
 
-        static void SimpleExceptionExample_custom_exception()
+        static void HandleMultipleException()
         {
             System.Console.WriteLine("=> Creating a car and stepping on it!");
 
@@ -195,11 +140,16 @@ namespace Application_Level_Exception
             
             try
             {
-                for(int i=0; i<10; ++i)
-                {
-                    myCar.Accelerate(10);
-                }
+                // for(int i=0; i<10; ++i)
+                // {
+                //     myCar.Accelerate(10);
+                // }
+                myCar.Accelerate(-10);
                 Console.ReadLine();
+            }
+            catch(ArgumentException ex)
+            {
+                System.Console.WriteLine(ex.Message);
             }
             catch (CarIsDeadException ex)
             {
@@ -208,19 +158,51 @@ namespace Application_Level_Exception
                  System.Console.WriteLine($"Time: {ex.ErrorTimeStamp}\n");
                  System.Console.WriteLine($"Cause: {ex.CauseOfError}\n");
 
-                 // display Exception.Data
+                // display Exception.Data
                 //  System.Console.WriteLine("\n=> custom Data:");
                 //  foreach(System.Collections.DictionaryEntry de in ex.Data)
-                //     System.Console.WriteLine($"-> {de.Key}: {de.Value}");
+                //  System.Console.WriteLine($"-> {de.Key}: {de.Value}");
             }
 
             System.Console.WriteLine("*** Out of Exceptions logic");
             Console.ReadLine();
         }
 
+        static void HandleMultipleException2()
+        {
+            System.Console.WriteLine("=> handling multiple exceptions:");
+            Car myCar = new Car("xy", 90);
 
+            try
+            {
+                myCar.Accelerate(90);
+            }
+            catch
+            {
+                System.Console.WriteLine("Something wrong happened...");
+            }
 
+            Console.ReadLine();
+            
+        }
+        static void HandleMultipleException3()
+        {
+            System.Console.WriteLine("=> handling multiple exceptions:");
+            Car myCar = new Car("xy", 90);
 
+            try
+            {
+                myCar.Accelerate(90);
+            }
+            catch
+            {
+                System.Console.WriteLine("Something wrong happened...");
+                throw;
+            }
+
+            Console.ReadLine();
+            
+        }
 
     }
 }
