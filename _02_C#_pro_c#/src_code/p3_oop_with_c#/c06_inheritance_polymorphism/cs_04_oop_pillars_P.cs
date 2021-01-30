@@ -180,6 +180,13 @@ namespace OOP_Pillars
                     - c# uniqueness:
                         - using new kw to hide any implementation above
                         - can apply new kw to any member type inherited
+                
+                + when to use override, when to use new?
+                    link: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords
+
+                    - The override modifier extends the base class virtual method,
+                    -  and the new modifier hides an accessible base class method.
+                
                 */
             }
 
