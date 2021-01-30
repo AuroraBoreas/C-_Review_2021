@@ -50,6 +50,8 @@ namespace cs_know_when_to_use_new_override
     {
         static void Main(string[] args)
         {
+            // link 1: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords
+            // link 2: https://stackoverflow.com/questions/1399127/difference-between-new-and-override
             Base bc = new Base();
             Derived dc = new Derived();
             Base bcdc = new Derived();
