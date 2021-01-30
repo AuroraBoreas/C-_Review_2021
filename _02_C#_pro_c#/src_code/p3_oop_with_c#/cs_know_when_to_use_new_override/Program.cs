@@ -56,19 +56,28 @@ namespace cs_know_when_to_use_new_override
             Derived dc = new Derived();
             Base bcdc = new Derived();
 
-            bc.Method1();   // bc method1
-            bc.Method2();   // bc method2
-            dc.Method1();   // dc method1. override method to implement dc's own method
-            dc.Method2();   // dc method2
-            bcdc.Method1(); // dc method1. polymorphism(v-table) due to override
-            bcdc.Method2(); // bc method2. implicit type conversion, upcasting
+            bc.Method1();           // bc method1
+            bc.Method2();           // bc method2
+            Console.WriteLine();
+
+            dc.Method1();           // dc method1. override method to implement dc's own method
+            ((Base)dc).Method1();   // bc method1. using upcasting to access original method of the base class
+            dc.Method2();           // dc method2
+            
+            Console.WriteLine();
+            bcdc.Method1();         // dc method1. polymorphism(v-table) due to override
+            ((Base)bcdc).Method1(); // dc method1.
+            bcdc.Method2();         // bc method2. implicit type conversion, upcasting
 
 
             /*
             
             conclusion:
-            - new is used to explicitly hide implementation above and suppress compiler warning
-            - override always pairs with virtual, is used to achieve polymorphism via v-table
+            - new is used to explicitly hide implementation above and suppress compiler warning.
+              but u can still access the original method by upcasting to the base class type
+
+            - override may pair with virtual, and MUST be used on abstract methods; is used to achieve polymorphism via v-table.
+              but u can never Access the original method by upcasting to the base class type
              
             */
 
