@@ -6,8 +6,13 @@ namespace XXXXX
     {
         static int Main(string[] args)
         {
-            //
+            // Motivation, P379
             {
+                /*
+                
+                + 
+                
+                */ 
 
             }
 

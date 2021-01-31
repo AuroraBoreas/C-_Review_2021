@@ -1,6 +1,6 @@
 using System;
 
-namespace Return_Interface
+namespace ICloneable_Interface
 {
 
     // class Point // version 0

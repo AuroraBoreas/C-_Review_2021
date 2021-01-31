@@ -1,6 +1,6 @@
 using System;
 
-namespace Return_Interface
+namespace ExplicitInterfaceImplementation
 {
 
     interface IDrawForm

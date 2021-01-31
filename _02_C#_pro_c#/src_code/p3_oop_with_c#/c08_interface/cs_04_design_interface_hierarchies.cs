@@ -1,6 +1,6 @@
 using System;
 
-namespace Return_Interface
+namespace Design_Interface
 {
     interface IDrawable
     {
