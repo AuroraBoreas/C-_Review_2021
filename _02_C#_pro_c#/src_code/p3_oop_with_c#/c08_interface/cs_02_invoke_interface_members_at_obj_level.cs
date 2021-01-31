@@ -28,6 +28,21 @@ namespace Invoke_Interface_Members
     {
         // ...;
     }
+
+    class Knife: IPoint
+    {
+        // ...;
+    }
+
+    class Fork: IPoint
+    {
+        // ...;
+    }
+
+    class PitchFork: IPoint
+    {
+        // ...;
+    }
     class Program
     {
 
@@ -58,6 +73,15 @@ namespace Invoke_Interface_Members
 
             }
 
+            // interface as return_value
+            {
+                FuckWithInterface_return_value();
+            }
+
+            // array of interface
+            {
+                FuckWithInterface_array();
+            }
 
             return 0;
         }
@@ -120,6 +144,56 @@ namespace Invoke_Interface_Members
             }
         }
 
+        static IPoint FindFirstPointyShape(Shape[] shapes)
+        {
+            foreach(shape s in shapes)
+            {
+                if(s is IPoint ip)
+                {
+                    return ip;
+                }
+            }
+            return null;
+        }
+
+        static void FuckWithInterface_return_value()
+        {
+            System.Console.WriteLine("=> fun with interfaces:");   
+
+            // make an array of shapes
+            Shape[] myShapes = 
+            {
+                new Hexagon(),
+                new Circle(),
+                new Triangle("Joe"),
+                new Circle("JOJO"),
+            };
+
+            IPoint firstPointItem = FindFirstPointyShape(myShapes);
+            System.Console.WriteLine("The item has {0} points", firstPointItem.Points);
+        }        
+        static void FuckWithInterface_array()
+        {
+            System.Console.WriteLine("=> fun with interfaces:");   
+
+            // make an array of IPoint
+            IPoint[] myPointObjects = 
+            {
+                new Hexagon(),
+                new Knife(),
+                new Fork(),
+                new PitchFork(),
+                new Circle(),
+            };
+
+            foreach(IPoint i in myPointObjects)
+            {
+                System.Console.WriteLine("object has {0} points.", i.Points);
+            }
+
+            Console.ReadLine();
+            
+        }        
 
     }
 }
