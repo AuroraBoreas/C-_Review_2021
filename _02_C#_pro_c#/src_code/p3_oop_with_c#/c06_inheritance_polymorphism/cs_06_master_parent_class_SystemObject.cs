@@ -138,6 +138,20 @@ namespace Master_Parent
                 // see class Person, GetHashCode()
             }
 
+            // know when to use abstract, or virtual
+            {
+                /*
+                
+                link: https://stackoverflow.com/questions/12254438/not-sure-when-to-use-an-abstract-property-and-when-not
+
+                + using abstract, when u have no implmentation and derived classes MUST implement;
+                + using virtual, when u have implementation in base class, but allow derived classes to override their own;
+                
+                */ 
+                
+
+            }
+
             //  using static methods of System.Object
             {
                 // Equals()

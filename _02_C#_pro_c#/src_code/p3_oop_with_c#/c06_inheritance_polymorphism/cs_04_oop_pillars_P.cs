@@ -158,13 +158,16 @@ namespace OOP_Pillars
                     - virtual methods have declaration only, defnition is set to =0;
                     - can't initialized and create obj
                     - methods marked with abstract are pure protocol
+                    
                     + c# uniqueness
                         - derived classes are NEVER required to override virtual methods
                         - to force each derived classes to override using abstract kw to define methods
                         - if derived classes are not override abstract methods, they are noncreatable abstract type that MUST be adorned with the abstract kw
+                    
                     + shared
                         - abstract members do not provide any implementation like c++
                         - abstract methods can only be defined in abc (both true in c++ and c#)
+                
                 + Base or Interface
                     - Top-down design and creation, what u see is inheritance and polymorphism
                     - after creation, what u see is derived classes share Interface
@@ -180,6 +183,7 @@ namespace OOP_Pillars
                     - c# uniqueness:
                         - using new kw to hide any implementation above
                         - can apply new kw to any member type inherited
+                
                 
                 + when to use override, when to use new?
                     link: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords
