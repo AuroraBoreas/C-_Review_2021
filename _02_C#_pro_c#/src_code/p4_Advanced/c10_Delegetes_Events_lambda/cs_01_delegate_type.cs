@@ -1,17 +1,17 @@
 using System;
 
-namespace XXX
+namespace Delegate_Type
 {
     class Program
     {
         static int Main(string[] args)
         {
-            // Custom Generic Methods, P408
+            // Delegate type, P418
             {
                 /*
                 
                 + concept
-                    - function template in C++
+                    - callback mechanism: any application requires that an obj be able to communicate BACK to the entity that created it;
 
                 + 
                 
