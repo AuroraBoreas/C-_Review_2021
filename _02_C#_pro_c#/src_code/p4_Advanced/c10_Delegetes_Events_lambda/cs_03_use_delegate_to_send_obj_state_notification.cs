@@ -232,16 +232,21 @@ namespace Use_Delegate_To_Send_Notification
                 + why: directly allocating delegate obj, whose register statement is long and ugly
                     ```c#
                     
-                    ...;
-                    Car c1 = new Car("ZL", 100, 10);
-                    c1.RegisterWithCarEngine(new Car.CarEngineHandler(OnCarEngineEvent));
+                    T FuncName(T... args) {...};
 
-                    Car.CarEngineHandler hanlder2 = new Car.CarEngineHandler(OnCarEngineEvent2);
-                    c1.RegisterWithCarEngine(hanlder2);
-                    ...;
+                    delegate T delegateTypeName<U, V, W..., T>;
+                    delegateTypeName dtn = new delegateTypeName(FuncName);
 
                     ```
                 + method group conversion: rather simply specifying method
+                    ```c#
+                   
+                    T FuncName(T... args) {...};
+
+                    delegate T delegateTypeName<U, V, W..., T>;
+                    delegateTypeName dtn = FuncName;    // <-- C++ style
+
+                    ```
                 
                 */ 
 
