@@ -6,16 +6,9 @@ namespace XXX
     {
         static int Main(string[] args)
         {
-            // Custom Generic Methods, P408
+            // 
             {
-                /*
-                
-                + concept
-                    - function template in C++
 
-                + 
-                
-                */ 
 
             }
 
