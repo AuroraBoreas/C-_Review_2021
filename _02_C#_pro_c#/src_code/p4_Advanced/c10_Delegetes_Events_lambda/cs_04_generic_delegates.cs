@@ -44,7 +44,9 @@ namespace Generic_Delegate
                         
                         Func<U, V, W..., T> f = new Func<U, V, W..., T>(func_name);
                         
-                        ```
+                + alige with Action<> and Func<>
+                    - Predicate<> is also supported; return true if a given var meets condition-expr, otherwise false
+                        >> mechanism: Func<T, bool>
 
                     >> for both Action<> and Func<> types, max args are 16 though
                     

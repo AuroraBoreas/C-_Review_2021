@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Anonymous_Methods
 {
@@ -57,7 +58,7 @@ namespace Anonymous_Methods
     {
         static int Main(string[] args)
         {
-            // 
+            // anonymous methods, P447
             {
                 /*
                 
@@ -75,9 +76,24 @@ namespace Anonymous_Methods
                 AnonymousMethodsDemo();
             }
 
-            //
+            // accessing local variables
             {
+                /*
+                
+                + note
+                    - lambda expression can NOT access ref or out params of the definition method;
+                    - lambda expression can NOT have a loal var with the same name as a local var in the outer method;
+                    - lambda expression can access instance var(or static var) in the outer class scope;
+                    - lambda expression can declare local vars with the same name as outer class member var, <-- hide the outer class member var;
+                
+                
+                */ 
 
+            }
+
+            // lambda expr, P451
+            {
+                
             }
 
             return 0;
