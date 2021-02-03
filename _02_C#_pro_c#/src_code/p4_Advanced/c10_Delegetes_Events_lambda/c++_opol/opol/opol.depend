@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1612314792 source:d:\reference_01_code\c#\_02_c#_pro_c#\src_code\p4_advanced\c10_delegetes_events_lambda\c++_opol\opol\main.cpp
+1612328753 source:d:\reference_01_code\c#\_02_c#_pro_c#\src_code\p4_advanced\c10_delegetes_events_lambda\c++_opol\opol\main.cpp
 	<iostream>
 	<iomanip>
 	<string>
 	"point.h"
 
-1612315111 d:\reference_01_code\c#\_02_c#_pro_c#\src_code\p4_advanced\c10_delegetes_events_lambda\c++_opol\opol\point.h
+1612328996 d:\reference_01_code\c#\_02_c#_pro_c#\src_code\p4_advanced\c10_delegetes_events_lambda\c++_opol\opol\point.h
 	<iostream>
 	<string>
 	<sstream>
+	<stdexcept>
 

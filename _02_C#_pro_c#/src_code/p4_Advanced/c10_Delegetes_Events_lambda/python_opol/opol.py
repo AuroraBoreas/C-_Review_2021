@@ -39,6 +39,27 @@ class Point:
     def __abs__(self):
         return Point(abs(self._x), abs(self._y))
 
+class PointCollection:
+    def __init__(self, seq: list):
+        self._seq = seq
+    def __getitem__(self, index: int):
+        try:
+            return self._seq[index]
+        except IndexError:
+            raise IndexError("IndexError: {} out of range".format(index))
+    def __setitem__(self, index: int, value: int):
+        try:
+            self._seq[index] = value
+        except IndexError:
+            raise IndexError("IndexError, {} out of range".format(index))
+    def __delitem__(self, index: int):
+        try:
+            del self._seq[index]
+        except IndexError:
+            raise IndexError("IndexError, {} out of range".format(index))
+    def __len__(self):
+        return len(self._seq)
+
 if __name__ == '__main__':
     p1 = Point()
     p2 = Point(3, 2)
@@ -50,3 +71,17 @@ if __name__ == '__main__':
     logging.debug("p1 - p2      : {}".format(p1 - p2))
     logging.debug("p2 * -3      : {}".format(p2 * -3))
     logging.debug("abs(p2 * -3) : {}".format(abs(p2 * -3)))
+
+    # test PointCollections
+    pc = PointCollection([p1, p2])
+
+    for p in pc:    # <-- iterate over pc;
+        logging.debug(p)
+
+    logging.debug("first item is : {}".format(pc[0]))
+    logging.debug("before change 2nd item, it is : {}".format(pc[1]))
+    pc[1] = Point(3, 5)
+    logging.debug("after change 2nd item, it is  : {}".format(pc[1]))
+    logging.debug("length before delete 2nd item : {}".format(len(pc)))
+    del pc[1]
+    logging.debug("length after delete 2nd item : {}".format(len(pc)))

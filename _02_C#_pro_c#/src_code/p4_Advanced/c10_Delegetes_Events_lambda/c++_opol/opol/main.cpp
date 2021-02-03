@@ -24,5 +24,15 @@ int main()
     std::cout << "s1 == s2 : " << std::boolalpha << (s1 == s2) << std::endl;
     std::cout << "-p2 is : " << (-p2).ToString() << std::endl;
 
+    // test PointCollection class
+
+    PointCollection pc = PointCollection(10);
+    pc[0] = Point();
+    pc[1] = Point(1, 1);
+    pc[2] = Point(2, 3);
+
+    for(int i=0; i<10; ++i)
+        std::cout << pc[i] << std::endl;
+
     return 0;
 }

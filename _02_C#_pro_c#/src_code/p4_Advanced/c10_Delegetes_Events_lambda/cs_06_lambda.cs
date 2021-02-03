@@ -58,7 +58,7 @@ namespace Anonymous_Methods
     {
         static int Main(string[] args)
         {
-            // anonymous methods, P447
+            // anonymous methods(underlying delegate), P447
             {
                 /*
                 
@@ -93,7 +93,41 @@ namespace Anonymous_Methods
 
             // lambda expr, P451
             {
+                /*
                 
+                + lambda vs delegate
+                    read link: https://docs.microsoft.com/en-us/dotnet/standard/delegates-lambdas
+                    
+                    - delegate, C-style function pointer;
+                    - lambda, anonymous function;
+                    
+                    >> conclusion: lambda is just delegate;
+                    
+                    >> syntax pattern:
+
+                        ```c#
+                        delegate returnType delegateTypeName(T..args);     // <-- full custom delegate type definition
+
+                        delegate (optional T...args) { ...; };             // <-- underlying delegate 
+                        
+                        delegate { ...; }                                  // <-- underlying delegate w/o args
+                        
+                        (T...args) => { ...; };                            // <-- full patter;
+                        
+                        (args...) => { ...; };                             // <-- T of lambda args can be thrown;
+
+                        arg => { ...; }                                    // <-- () can be thrown if it has a single lambda arg
+
+                        () => { ...; }                                     // <-- () is a must when it has no args;
+                        
+                        (T...args) => ...;                                 // <-- {} can be thrown if it has exaclt one statement;
+
+                        func((T...args) => ())                             // <-- {} can be substituted by () 
+
+                        ```
+                
+                */
+
             }
 
             return 0;
@@ -125,6 +159,77 @@ namespace Anonymous_Methods
                 c1.Accelerate(20);
             
             Console.ReadLine();
+        }
+
+        private static void TraditionalDelegateSyntax()
+        {
+            // make a list with elements of int
+            List<int> intList = new List<int>
+            { 20, 1, 4, 8, 9, 44  };
+
+            Predicate<int> callback = IsEvenNumber;
+            List<int> evenNumbers = intList.FindAll(callback);
+
+            System.Console.WriteLine("=>here are even numbers:");
+            foreach(int i in evenNumbers)
+                System.Console.WriteLine("{0}\t", i);
+
+            System.Console.WriteLine();
+
+            static bool IsEvenNumber(int i)
+            { return i%2 == 0; }
+        }
+
+        private static void AnonymousMethodSyntax()
+        {
+            // make a list with elements of int
+            List<int> intList = new List<int>
+            { 20, 1, 4, 8, 9, 44  };
+
+            // Predicate<int> callback = IsEvenNumber;
+            List<int> evenNumbers = intList.FindAll(delegate(int i){ i%2 == 0; });
+
+            System.Console.WriteLine("=>here are even numbers:");
+            foreach(int i in evenNumbers)
+                System.Console.WriteLine("{0}\t", i);
+
+            System.Console.WriteLine();
+    
+        }
+
+        private static void AnonymousExpression()
+        {
+            // make a list with elements of int
+            List<int> intList = new List<int>
+            { 20, 1, 4, 8, 9, 44  };
+
+            // Predicate<int> callback = IsEvenNumber;
+            List<int> evenNumbers = intList.FindAll((int i)=>{ i%2 == 0; });
+
+            System.Console.WriteLine("=>here are even numbers:");
+            foreach(int i in evenNumbers)
+                System.Console.WriteLine("{0}\t", i);
+
+            System.Console.WriteLine();
+        }
+
+
+        static void FuckWithLambda()
+        {
+            System.Console.WriteLine("=> fun with lambda:");
+
+            TraditionalDelegateSyntax();
+            System.Console.WriteLine();
+
+            AnonymousMethodSyntax();
+            System.Console.WriteLine();
+
+            AnonymousExpression();
+            System.Console.WriteLine();
+            
+            Console.ReadLine();
+            
+            
         }
         
     }

@@ -39,17 +39,17 @@ namespace Class_Template_Constraints
 
     // operator constraints are NOT supported under the current C#;
 
-    class BasicMath<T> where T: operator +, operator -, operator *, operator /
-    {
-        public T Add(T x, T y)
-        { return x + y; }
-        public T Sub(T x, T y)
-        { return x - y; }
-        public T Mul(T x, T y)
-        { return x * y; }
-        public T Div(T x, T y)
-        { return x / y; }
-    }
+    // class BasicMath<T> where T: operator +, operator -, operator *, operator /  // <-- compiler error for sure: compiler does NOT know T has ability to +,-,*,/ etc
+    // {
+    //     public T Add(T x, T y)
+    //     { return x + y; }
+    //     public T Sub(T x, T y)
+    //     { return x - y; }
+    //     public T Mul(T x, T y)
+    //     { return x * y; }
+    //     public T Div(T x, T y)
+    //     { return x / y; }
+    // }
 
     
     class Program
