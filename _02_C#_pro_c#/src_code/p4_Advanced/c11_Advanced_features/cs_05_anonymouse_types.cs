@@ -36,7 +36,7 @@ namespace AnonymouseTypes
                 
                 + mechanism: it's similar with namedtuple in Python? but step further..
                     >> AnonymousType is automatically derived from System.Object;
-                    >> syntax is initialization_list { Name-Value pairs; }
+                    >> syntax is initialization_list: `new { Name-Value pairs; };`
                 
                 + note
                     >> Anonymous types typically are used in the select clause of a query expression to return a subset of the properties from each object in the source sequence
@@ -109,7 +109,7 @@ namespace AnonymouseTypes
                 System.Console.WriteLine("-> Not the same anonymous object!");
             
             // ==? (non-overrid) == operator uses reference to test equality
-                if(car1 == car2)
+            if(car1 == car2)
                 System.Console.WriteLine("-> same anonymous object!");
             else
                 System.Console.WriteLine("-> Not the same anonymous object!");

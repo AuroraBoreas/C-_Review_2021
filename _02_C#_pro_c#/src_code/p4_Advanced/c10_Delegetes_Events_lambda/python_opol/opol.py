@@ -6,7 +6,8 @@ this module demonstrates opol in Python
 
 """
 import logging
-logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(message)s")
+log = "log"
+logging.basicConfig(filename=log, level=logging.DEBUG, format="%(asctime)s--%(module)s, %(message)s")
 
 class Point:
     # ctor
