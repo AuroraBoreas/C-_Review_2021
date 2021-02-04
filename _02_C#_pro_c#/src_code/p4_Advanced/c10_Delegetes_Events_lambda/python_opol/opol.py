@@ -76,8 +76,8 @@ if __name__ == '__main__':
     # test PointCollections
     pc = PointCollection([p1, p2, Point(), Point(12, 42), Point(8, 22)])
 
-    for p in pc:    # <-- iterate over pc;
-        logging.debug(p)
+    logging.debug("loop over PointCollection obj:")
+    for p in pc: logging.debug(p)   # <-- iterate over pc;
 
     logging.debug("first item is : {}".format(pc[0]))
     logging.debug("before change 2nd item, it is : {}".format(pc[1]))
@@ -86,3 +86,5 @@ if __name__ == '__main__':
     logging.debug("length before delete 2nd item : {}".format(len(pc)))
     del pc[1]
     logging.debug("length after delete 2nd item : {}".format(len(pc)))
+
+    for p in pc: logging.debug(p)   # <-- iterate over pc;
