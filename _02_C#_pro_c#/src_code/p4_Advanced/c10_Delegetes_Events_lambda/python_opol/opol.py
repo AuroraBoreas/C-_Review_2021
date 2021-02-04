@@ -9,10 +9,11 @@ import logging
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s %(message)s")
 
 class Point:
+    # ctor
     def __init__(self, x: int = 0, y: int = 0):
         self._x = x
         self._y = y
-
+    # getter, setter
     def GetX(self):
         return self._x
     def GetY(self):
@@ -21,15 +22,15 @@ class Point:
         self._x = x
     def SetY(self, y: int):
         self._y = y
-
+    # override repr op
     def __repr__(self):
         return f"[{self._x}, {self._y}]"
-
+    # override relational ops
     def __eq__(self, other):
         return (self.__repr__() == other.__repr__())
     def __gt__(self, other):
         return (self.__repr__() > other.__repr__())
-
+    # override arithmetic ops
     def __add__(self, other):
         return Point(self._x + other._x, self._y + other._y)
     def __sub__(self, other):
@@ -73,7 +74,7 @@ if __name__ == '__main__':
     logging.debug("abs(p2 * -3) : {}".format(abs(p2 * -3)))
 
     # test PointCollections
-    pc = PointCollection([p1, p2])
+    pc = PointCollection([p1, p2, Point(), Point(12, 42), Point(8, 22)])
 
     for p in pc:    # <-- iterate over pc;
         logging.debug(p)
