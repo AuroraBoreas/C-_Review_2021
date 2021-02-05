@@ -16,9 +16,9 @@ namespace BuildConsumeCustomClassLib
 
                 System.Console.WriteLine(sc1.ToString());
                 System.Console.WriteLine(mv1.ToString());
-
                 Console.ReadLine();
-
+                // see Project folder "custom_namespace01"
+                // see project folder "custom_namespace02" 
             }
 
             // configure private assemblies, P586
@@ -36,9 +36,33 @@ namespace BuildConsumeCustomClassLib
                     ```c#
 
                     <probing privatePath="MyLibraries;MyLibraries\Tests"/>
+
                     ```
                 
                 */ 
+
+                // see Project folder "MyCSharpCarApp"
+                // see Project folder "MyVBCarApp"
+                // see Project folder "MyApp"
+            }
+
+            // configure shared assemblies, P589
+            {
+                /*
+                
+                + when to use
+                    - building libraries to be widely used over lots of projects
+
+                + how to configure
+                    - assign SNK to your assembly(*.dll);
+                        >> command-line named "developer command prompt"
+                        >> using VS
+                    - add your libraries(*.dll)  to GAC(folder name: assembly);
+                        >> using command-line tool named "gacutil.exe" to install
+                */
+            }
+
+            {
 
             }
 
