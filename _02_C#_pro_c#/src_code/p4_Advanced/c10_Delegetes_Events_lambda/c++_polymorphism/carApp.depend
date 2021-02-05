@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1612485287 source:d:\reference_01_code\c#\_02_c#_pro_c#\src_code\p4_advanced\c10_delegetes_events_lambda\carapp\main.cpp
+	<iostream>
+	<list>
+	"car.h"
+
+1612485627 d:\reference_01_code\c#\_02_c#_pro_c#\src_code\p4_advanced\c10_delegetes_events_lambda\carapp\car.h
+	<string>
+	<sstream>
+	<iostream>
+

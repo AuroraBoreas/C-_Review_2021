@@ -2,8 +2,11 @@
 #include <iomanip>
 #include <string>
 #include "point.h"
+#include "pointcollection.h"
 
 using namespace std;
+
+int MX = 30;
 
 int main()
 {
@@ -34,5 +37,6 @@ int main()
     for(int i=0; i<10; ++i)
         std::cout << pc[i] << std::endl;
 
+    std::cout << pc[11] << std::endl;
     return 0;
 }

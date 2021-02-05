@@ -4,7 +4,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <stdexcept>
+
+extern int MX;
 
 class Point
 {
@@ -15,7 +16,7 @@ private:
 public:
     // ctors
     Point(int x=0, int y=0)
-    : X(x), Y(y){}
+    : X(x), Y(y){ std::cout << "in Point class, MX = " << MX << std::endl; }
     // dstors
     ~Point(){}
 
@@ -63,38 +64,6 @@ public:
     {
         return Point(X * -1, Y * -1);
     }
-
-};
-
-class PointCollection
-{
-private:
-    int m_Max;
-    Point* PointsCollectionPtr;
-public:
-    PointCollection(int max=100)
-    : m_Max(max)
-    { PointsCollectionPtr = new Point[m_Max]; }
-
-    ~PointCollection() { delete PointsCollectionPtr; }
-
-    Point& operator[](int index)
-    {
-        if(index < m_Max && index >= 0)
-            return PointsCollectionPtr[index];
-        else
-            throw std::out_of_range("index out of range!");
-    }
-
-    const Point& operator[](int index) const
-    {
-        if(index < m_Max && index >= 0)
-            return PointsCollectionPtr[index];
-        else
-            throw std::out_of_range("index out of range!");
-    }
-
-
 
 };
 
