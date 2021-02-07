@@ -62,6 +62,17 @@ namespace Dynamic_KW
                 UseDynamicType_in_class();
 
             }
+            
+            // limitation of "dynamic" kw
+            {
+                /*
+                
+                + note
+                    >> can NOT makes use of lambda-expr or anonymous-methods;
+                    >> can NOT makes use of LINQ technology;
+                
+                */ 
+            }
 
             return 0;
         }
