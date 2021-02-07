@@ -17,6 +17,24 @@ namespace Dynamic_KW
         => $"Name: {FirstName} {LastName}, Age: {Age}";
     }
 
+
+    class VeryDynamicClass
+    {
+        private static dynamic myDynamicField;
+        public dynamic DynamicProp { get; set; }
+        public dynamic DynamicMethod(dynamic dynamicArg)
+        {
+            // a local dynamic
+            dynamic dynamicLocalVar = "local var";
+            int myInt = 10;
+
+            if(dynamicLocalVar is int)
+                return dynamicLocalVar;
+            else
+                return myInt;
+        }
+    }
+
     class Program
     {
         static int Main(string[] args)
@@ -32,8 +50,16 @@ namespace Dynamic_KW
                 UseDynamicType_dreamup();
             }
 
-            //
+            // scope of "dynamic" kw
             {
+                /*
+                
+                + comparison
+                    - "var" kw can't be return_type, args,  or a member of a class;
+                    - "dynamic" kw can be;
+                
+                */ 
+                UseDynamicType_in_class();
 
             }
 
@@ -86,9 +112,16 @@ namespace Dynamic_KW
             System.Console.WriteLine(d.ToUpper());  // <-- no intellisense; be careful :s
             System.Console.WriteLine(d.toupper());  // 
             System.Console.WriteLine(d.Foo(12, "hello", DateTime.Now));
-
+    
 
             Console.ReadLine();
+        }
+
+        private static void UseDynamicType_in_class()
+        {
+            VeryDynamicClass vdc = new VeryDynamicClass();
+            dynamic x = 10;
+            System.Console.WriteLine(vdc.DynamicMethod(x));
         }
 
     }
