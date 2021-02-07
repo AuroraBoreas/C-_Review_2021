@@ -1,0 +1,8 @@
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\bin\Debug\ExportDataToOfficeApp.exe.config
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\bin\Debug\ExportDataToOfficeApp.exe
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\bin\Debug\ExportDataToOfficeApp.pdb
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\obj\Debug\ExportDataToOfficeApp.csprojAssemblyReference.cache
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\obj\Debug\ExportDataToOfficeApp.csproj.ResolveComReference.cache
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\obj\Debug\ExportDataToOfficeApp.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\obj\Debug\ExportDataToOfficeApp.exe
+C:\Users\Aurora_Boreas\source\repos\ExportDataToOfficeApp\obj\Debug\ExportDataToOfficeApp.pdb
