@@ -28,6 +28,8 @@ namespace Dynamic_KW
                 UseObjctVar();
                 // step further
                 UseDynamicType();
+                // use
+                UseDynamicType_dreamup();
             }
 
             //
@@ -54,13 +56,37 @@ namespace Dynamic_KW
         
         private static void UseDynamicType()
         {
-            string s1 = "greeting";
+            var s1 = "greeting";
             object s2 = "From";
             dynamic s3 = "ZL";
 
             System.Console.WriteLine("s1 is type of {0}", s1.GetType().Name);
             System.Console.WriteLine("s2 is type of {0}", s2.GetType().Name);
             System.Console.WriteLine("s3 is type of {0}", s3.GetType().Name);
+
+            Console.ReadLine();
+        }
+
+        private static void UseDynamicType_change()
+        {
+            dynamic t = "hello";
+            System.Console.WriteLine("t is type of {0}", t.GetType().Name);
+            
+            t = false;
+            System.Console.WriteLine("t is type of {0}", t.GetType().Name);
+
+            t = new List<int>(){90};
+            System.Console.WriteLine("t is type of {0}", t.GetType().Name);
+
+        }
+
+        private static void UseDynamicType_dreamup()
+        {
+            dynamic d = "hello";
+            System.Console.WriteLine(d.ToUpper());  // <-- no intellisense; be careful :s
+            System.Console.WriteLine(d.toupper());  // 
+            System.Console.WriteLine(d.Foo(12, "hello", DateTime.Now));
+
 
             Console.ReadLine();
         }
