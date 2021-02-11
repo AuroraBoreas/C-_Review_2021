@@ -9,7 +9,7 @@ namespace WindowsProcess
             // thread, P680
             {
                 /*
-                
+
                 + definition
                     >> a path of execution within a process;
                     >> the first thread created by a process's entry point is termd "primary thread";
@@ -17,15 +17,15 @@ namespace WindowsProcess
                 + note
                     >> using too many threads in a single process can actually "degrade" performance;
                     >> why? CPU has to switch btwn the active threads in the proccess(which takes time);
-                
-                */ 
+
+                */
 
             }
 
             // interact with Process, P682
             {
                 /*
-                
+
                 + Tool: using System.Diagnostics namespace
                     - Process           // access proceses, start and stop processs;
                     - ProcessModule     // represents any module(*.exe, *.dll) including COM-based, .NET-basd, or C-binaries;
@@ -45,15 +45,15 @@ namespace WindowsProcess
                     - Responding
                     - StartTime
                     - Threads
-                
+
                 + System.Diagnostics.Process, selected methods
                     - CloseMainWindow()
                     - GetCurrentProcess()
                     - GetProcesses()
                     - Kill()
                     - Start()
-                
-                */ 
+
+                */
                 // List processes
                 EnumerateRunningProcesses();
 
@@ -62,7 +62,7 @@ namespace WindowsProcess
             // Threads
             {
                 /*
-                
+
                 + System.Diagnostics.ProcessThread, selected members
                     - CurrentPriority
                     - Id
@@ -78,8 +78,8 @@ namespace WindowsProcess
                 + note
                     >> ProcessThread is NOT the entity used to create, suspend, or kill under the .NET platform;
                     >> rather is a vehicle used to obtain diagnosti info for the active windows threads wthin a running process;
-                
-                */ 
+
+                */
 
                 // List threads for a Process, pID from above; chrome: 15016
                 EnumerateThreadsForPid(15016);
@@ -95,13 +95,13 @@ namespace WindowsProcess
             {
                 StartAndKillProcess_excel();
             }
-            
+
             return 0;
         }
 
         private static void EnumerateRunningProcesses()
         {
-            var runningProcesses = 
+            var runningProcesses =
             from proc in Process.GetProcess(".")
             orderby proc.Id
             select proc;
@@ -113,9 +113,9 @@ namespace WindowsProcess
             }
             System.Console.WriteLine("**********************\n");
             Console.ReadLine();
-            
+
         }
-        
+
         private static void EnumerateThreadsForPid(int Pid)
         {
             Process theProc = null;
@@ -139,7 +139,7 @@ namespace WindowsProcess
             }
             System.Console.WriteLine("**********************\n");
             Console.ReadLine();
-            
+
         }
 
         private static void EnumerateModuleForProcess(int Pid)
@@ -175,7 +175,7 @@ namespace WindowsProcess
 
             System.Console.WriteLine("-> Hit enter to kill {0}...", chromeProc.ProcessName);
             Console.ReadLine();
-            
+
             // kill
             try
             {
