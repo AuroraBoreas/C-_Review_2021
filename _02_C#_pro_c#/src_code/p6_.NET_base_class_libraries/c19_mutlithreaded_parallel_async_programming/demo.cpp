@@ -1,12 +1,13 @@
 #include <iostream>
 #include <sstream>
+#include <cmath>
 
 using namespace std;
 
 class MaxDivider
 {
 private:
-    int numerator, digit;
+    int numerator, digit, nod;
 
     int GetDigitalLen(int x) const
     {
@@ -16,8 +17,8 @@ private:
     }
 
 public:
-    MaxDivider(int num=698, int dig=8)
-    : numerator(num), digit(dig){}
+    MaxDivider(int num=698, int dig=8, int numOfDigits=2)
+    : numerator(num), digit(dig), nod(numOfDigits){}
 
     void CalcResults(void) const
     {
@@ -26,7 +27,7 @@ public:
         std::cout << std::endl;
         for (int i = 1; i < 10; ++i)
         {
-            den = digit + 10 * i;
+            den = digit + i * std::pow(10, nod-1);
             res = numerator / den;
 
             std::cout << numerator << "/" << den << " = " << res << ", " << GetDigitalLen(res) << std::endl;
