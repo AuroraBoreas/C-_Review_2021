@@ -6,13 +6,23 @@ this module demonstrates how to solve 汪一诺 's questions
 
 """
 
-被除数 = 698
-除数   = "{}8"
+class MaxDivider:
+    def __init__(self, num: int=698, dig: int=8):
+        self._num = num
+        self._dig = dig
 
-res = {}
-print("{}/{} : ".format(被除数, 除数))
-for i in range(1, 10):
-    n = 除数.format(i)
-    q = 被除数 // int(n)
-    print("{}/{} = {:2}, 商有{}位".format(被除数, n, q, len(str(q))))
-print()
+    def calc_result(self):
+        print("\n{}/(){} : ".format(self._num, self._dig))
+        for i in range(1, 10):
+            n = self._dig + i * 10
+            q = self._num // n
+            print("{}/{} = {:2}, 商有{}位".format(self._num, n, q, len(str(q))))
+        print()
+
+def main():
+    md = MaxDivider(798, 9)
+    md.calc_result()
+
+
+if __name__ == '__main__':
+    main()

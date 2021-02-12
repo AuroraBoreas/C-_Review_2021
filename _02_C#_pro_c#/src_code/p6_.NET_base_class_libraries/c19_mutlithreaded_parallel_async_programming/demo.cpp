@@ -1,38 +1,45 @@
 #include <iostream>
-#include <string>
 #include <sstream>
 
 using namespace std;
 
-inline int GetDigitalLen(int x)
+class MaxDivider
 {
-    std::stringstream ss;
-    ss << x;
-    return ss.str().length();
-}
+private:
+    int numerator, digit;
 
-inline void GetResult(void)
-{
-    int const digit = 8;
-    int den = 698;
-    int nom;
-    int res;
-
-    for(int i=1; i<10; ++i)
+    int GetDigitalLen(int x) const
     {
-        nom = digit + 10 * i;
-        res = den / nom;
-        std::cout << den << "/" << nom << " = " << res << ", " << GetDigitalLen(res) << std::endl;
-
+        std::stringstream ss;
+        ss << x;
+        return ss.str().length();
     }
-    std::cout << std::endl;
-}
 
+public:
+    MaxDivider(int num=698, int dig=8)
+    : numerator(num), digit(dig){}
+
+    void CalcResults(void) const
+    {
+        int den, res;
+
+        std::cout << std::endl;
+        for (int i = 1; i < 10; ++i)
+        {
+            den = digit + 10 * i;
+            res = numerator / den;
+
+            std::cout << numerator << "/" << den << " = " << res << ", " << GetDigitalLen(res) << std::endl;
+        }
+        std::cout << std::endl;
+    }
+};
 
 int main()
 {
 
-    GetResult();
+    MaxDivider md = MaxDivider();
+    md.CalcResults();
 
 
     return 0;
