@@ -27,6 +27,5 @@ def main():
     md = MaxDivider(698, 8, 2)
     md.calc_result()
 
-
 if __name__ == '__main__':
     main()
