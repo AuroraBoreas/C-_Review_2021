@@ -21,8 +21,8 @@ namespace SystenmIONamespace
 
                     - DriveInfo
 
-                    - File
-                    - FileInfo
+                    - File                  // exposes functionality using "static members", class-level;
+                    - FileInfo              // exposes same functionality using instance-level;
 
                     - FileStream            //  random file access with data represented as a stream of bytes;
 
@@ -30,7 +30,7 @@ namespace SystenmIONamespace
 
                     - MemoryStream         // random access to streamed data stored in memory rather in a physical file;
 
-                    - Path
+                    - Path                 //
 
                     - StreamWriter         // store or retrieve textual info to or from a file; but do NOT support random-file-access
                     - StreamReader

@@ -118,7 +118,39 @@ namespace AbstractStreamClass
                 >> u can use StringWriter and StringReader types to treat textual info as a stream of in-memory characters;
                 >> this can prove helpful when u would like to append character-based info to an underlying buffer;
 
+                + StringWrite class
+                >> allows u to use GetStringBuilder() method to extract a System.Text.StringBuilder object;
+
+
                 */
+                FuckWithStringWriter_StreamReader();
+                FuckWithStringWriter_GetStringBuilder();
+            }
+
+            // BinaryWriter, BinaryReader
+            {
+                /*
+
+                + BinaryWriter core members
+                    - BaseStream
+                    - Close()
+                    - Flush()
+                    - Seek()
+                    - Write()
+
+                + BinaryReader core members
+                    - BaseStream
+                    - Close()
+                    - PeakChar()
+
+                    - Read()
+                    - ReadXXX()         // e.g., ReadBoolean(), ReadByte(), ReadInt32();
+
+
+                */
+
+                FuckWithBinaryWriter();
+
             }
 
             return 0;
@@ -200,5 +232,72 @@ namespace AbstractStreamClass
             {}
         }
 
+        static void FuckWithStringWriter_StreamReader()
+        {
+            System.Console.WriteLine("***** fun with StringWriter / StringReader *****\n");
+
+            using(StringWriter sw = new StringWriter())
+            {
+                sw.WriteLine("Dont forget Mother's day this year...");
+                System.Console.WriteLine("Contents of StringWriter:\n {0}", sw);
+            }
+            Console.ReadLine();
+
+        }
+
+        static void FuckWithStringWriter_GetStringBuilder()
+        {
+            using(StringWriter sw = new StringWriter())
+            {
+                System.Console.WriteLine("Dont forget Mother's Day this year...");
+                System.Console.WriteLine("Contents of StringWriter:\n{0}", sw);
+
+                StringBuilder sb = sw.GetStringBuilder();
+                sb.Insert(0, "Hey!");
+                System.Console.WriteLine("-> {0}", sb.ToString());
+                sb.Remove(0, "Hey!".Length);
+                System.Console.WriteLine("-> {0}", sb.ToString());
+            }
+            Console.ReadLine();
+
+        }
+
+        static void FuckWithBinaryWriter()
+        {
+            Console.ReadLine("***** fun with Binary Writer / Reader *****\n");
+
+            FileInfo f = new FileInfo(@"Binary.dat");
+
+            using(BinaryWriter bw = new BinaryWriter(f.OpenWrite()))
+            {
+                System.Console.WriteLine("Base stream is: {0}", bw.BaseStream);
+
+                double aDouble = 1234.67;
+                int anInt = 34567;
+                string aString = "A, B, C";
+
+                bw.Write(aDouble);
+                bw.Write(anInt);
+                bw.Write(aString);
+            }
+            System.Console.WriteLine("Done!");
+            Console.ReadLine();
+
+        }
+
+        static void FuckWithBinaryReader()
+        {
+
+            FileInfo f = new FileInfo(@"BinFile.Dat");
+
+            using(BinaryReader br = new BinaryReader(f.OpenRead()))
+            {
+                System.Console.WriteLine(br.ReadDouble());
+                System.Console.WriteLine(br.ReadInt32());
+                System.Console.WriteLine(br.ReadString());
+            }
+            Console.ReadLine();
+
+        }
     }
 }

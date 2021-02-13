@@ -1,3 +1,11 @@
+/*
+
+this program is to solve a problem at primary-school-level for my niece;
+
+@ZL, 20210211
+
+*/
+
 #include <iostream>
 #include <sstream>
 #include <cmath>
