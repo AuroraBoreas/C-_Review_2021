@@ -41,6 +41,8 @@ namespace FileWatcher
 
             }
 
+
+
             return 0;
         }
 
@@ -86,10 +88,6 @@ namespace FileWatcher
 
             }
         }
-
-
-
-
 
     }
 }
