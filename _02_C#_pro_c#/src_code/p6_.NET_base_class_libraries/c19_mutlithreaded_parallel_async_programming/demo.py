@@ -21,11 +21,11 @@ class MaxDivider:
         print()
 
 def main():
-    md = MaxDivider(4798, 39, 3)
+    md = MaxDivider(4698, 88, 3)
     md.calc_result()
 
-    md = MaxDivider(698, 8, 2)
-    md.calc_result()
+    # md = MaxDivider(698, 8, 2)
+    # md.calc_result()
 
 if __name__ == '__main__':
     main()
