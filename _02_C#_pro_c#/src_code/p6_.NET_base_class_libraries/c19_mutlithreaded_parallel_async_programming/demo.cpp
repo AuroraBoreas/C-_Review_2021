@@ -7,6 +7,7 @@ this program is to solve a problem at primary-school-level for my niece;
 */
 
 #include <iostream>
+#include <iomanip>
 #include <sstream>
 #include <cmath>
 
@@ -25,20 +26,26 @@ private:
     }
 
 public:
-    MaxDivider(int num=698, int dig=8, int numOfDigits=2)
-    : numerator(num), digit(dig), nod(numOfDigits){}
+    MaxDivider(int num=698, int dig=8)
+    : numerator(num), digit(dig)
+    {
+        nod = GetDigitalLen(dig);
+    }
 
     void CalcResults(void) const
     {
         int den, res;
 
-        std::cout << std::endl;
+        std::cout << numerator << "/ _" << den << ": " << std::endl;
         for (int i = 1; i < 10; ++i)
         {
-            den = digit + i * std::pow(10, nod-1);
+            den = digit + i * std::pow(10, nod);
             res = numerator / den;
 
-            std::cout << numerator << "/" << den << " = " << res << ", " << GetDigitalLen(res) << std::endl;
+            std::cout << numerator << "/" << den << " = "
+                      << std::setw(3) << std::setfill(' ') << res
+                      << ", Quotient has " << GetDigitalLen(res) << " digit"
+                      << std::endl;
         }
         std::cout << std::endl;
     }
@@ -47,7 +54,7 @@ public:
 int main()
 {
 
-    MaxDivider md = MaxDivider();
+    MaxDivider md = MaxDivider(698, 8);
     md.CalcResults();
 
 

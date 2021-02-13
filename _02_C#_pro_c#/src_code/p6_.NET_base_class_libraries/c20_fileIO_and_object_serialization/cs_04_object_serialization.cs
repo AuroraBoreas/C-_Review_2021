@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Soap;
+using System.Xml.Serialization;
 
 namespace ObjectSerialization
 {
@@ -115,12 +117,23 @@ namespace ObjectSerialization
 
             // using SoapFormatter
             {
-                // pass
+                // see SaveAsSoapFormat();
             }
 
             // using XmlSerializer
             {
-                // pass
+                // see SaveAsXmlFormat();
+            }
+
+            // serialize collections of obje
+            {
+
+            }
+
+
+            // customize Soap/Binary Serialization Process
+            {
+
             }
 
             return 0;
@@ -153,6 +166,28 @@ namespace ObjectSerialization
             System.Console.WriteLine("=> Saved Car in binary format!");
         }
 
+        private static void SaveAsSoapFormat(object objGraph, string fileName)
+        {
+            SoapFormatter soapFmt = new SoapFormatter();
+
+            using(Stream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                soapFmt.Serialize(fs, objGraph);
+            }
+            System.Console.WriteLine("=> Save Car in SAOP format!");
+        }
+
+        private static void SaveAsXmlFormat(object objGraph, string filename)
+        {
+            XmlSerializer xmlFmt = new XmlSerializer(typeof(JamesBondCar));
+
+            using(Stream fs = new FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                xmlFmt.Serialize(fs, objGraph);
+            }
+            System.Console.WriteLine("=> Saved Car in XML format!");
+        }
+
         static void FuckWithObjectSerialization_Serialize()
         {
             System.Console.WriteLine("***** fun with object serialization *****\n");
@@ -178,6 +213,7 @@ namespace ObjectSerialization
             }
 
         }
+
 
 
 
