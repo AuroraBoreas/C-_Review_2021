@@ -170,6 +170,19 @@ namespace SystenmIONamespace
                 FileInfo_Create2();
             }
 
+            // File type, P817
+            {
+                /*
+
+                + difference
+                    >> just like difference btwn DirectoryInfo/Directory;
+                    >> u can use File type to read and write batches of data in only a few lines of code;
+                    >> even better, each of these members automatically closes down the underlying file handle;
+
+                */
+                FileOpen();
+                SimpleIOwithFileType();
+            }
 
 
             return 0;
@@ -304,7 +317,59 @@ namespace SystenmIONamespace
             }
         }
 
+        static void FileOpen()
+        {
+            using(FileStream fs = File.Create(@"C:\Test1.dat"))
+            {}
 
+            using(FileStream fs = File.Open(@"C:\Test2.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None))
+            {}
+
+            using(FileStream fs = File.OpenRead(@"C:\Test3.dat"))
+            {}
+
+            using(FileStream fs = File.OpenWrite(@"C:\Test4.dat"))
+            {}
+
+            using(StreamReader sr = File.OpenText(@"C:\boot.ini"))
+            {}
+
+            using(StreamWriter sw = File.CreateText(@"C:\Text6.txt"))
+            {}
+
+            /*
+
+            + methods of the File Type
+                - ReadAllBytes()
+                - ReadAllLines()
+                - ReadAllText()
+
+                - WriteAllBytes()
+                - WriteAllLines()
+                - WriteAllText()
+
+            */
+            using(StreamWriter sw = File.AppendText(@"C:\FinalTest.txt"))
+            {}
+        }
+
+        static void SimpleIOwithFileType()
+        {
+            System.Console.WriteLine("***** Simple I/O with the File Type *****\n");
+            {
+                string[] myTasks = {
+                    "Fix bathroom sink", "Call Dave",
+                    "Call Mom and Dad", "Play Xbox One"
+                };
+
+                File.WriteAllLines(@"tasks.txt", myTasks);
+
+                foreach(string task in File.ReadAllLines(@"tasks.txt"))
+                    System.Console.WriteLine("TODO: {0}", task);
+
+                Console.ReadLine();
+            }
+        }
 
 
     }
