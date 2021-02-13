@@ -112,7 +112,7 @@ namespace SystenmIONamespace
                 + FileInfo core members
                     - AppendText()      // creates a StreamWrite obj that appends text to a file;
                     - CopyTo()
-                    - Create()
+                    - Create()          // creates a FileStream obj that grants full write/read acess to users;
                     - CreateText()
 
                     - Delete()
@@ -124,12 +124,50 @@ namespace SystenmIONamespace
                     - MoveTo()
 
                     - Name
-                    - Open()
+
+                    - Open()            // is similar with Create(), but more precision;
                     - OpenRead()
                     - OpenText()
                     - OpenWrite()
 
+                + definition of FileMode
+                    ```c#
+                    public enum FileMode
+                    {
+                        CreateNew,
+                        Create,
+                        Open,
+                        OpenOrCreate,
+                        Truncate,
+                        Append
+                    }
+                    ```
+
+                + definition of FileAccess
+                    ```c#
+                    public enum FileAccess
+                    {
+                        Read,
+                        Write,
+                        ReadWrite
+                    }
+                    ```
+
+                + definition of FileShare
+                    ```c#
+                    public enum FileShare
+                    {
+                        Delete,
+                        Inheritable,
+                        None,
+                        Read,
+                        ReadWrite,
+                        Write
+                    }
+                    ```
                 */
+                FileInfo_Create();
+                FileInfo_Create2();
             }
 
 
@@ -239,10 +277,31 @@ namespace SystenmIONamespace
 
         static void FileInfo_Create()
         {
-            FileInfo f = new FileInfo(@"C:\Test.dat");  // return a specific I/O-centric obj that allows u to begin reading and writing data to the associated file in a variety of formats;
+            FileInfo f = new FileInfo(@"C:\Test.dat");
+            // return a specific I/O-centric obj that allows u to begin reading and writing data to the associated file in a variety of formats;
+
+            // FileInfo.Create() grants full write/read access to user;
             FileStream fs = f.Create();
             // ...;
             fs.Close();
+        }
+
+        static void FileInfo_Create2()
+        {
+            FileInfo f = new FileInfo(@"C:\Test.dat");
+            using(FileStream fs = f.Create())
+            {
+                // ...;
+            }
+        }
+
+        static void FilInfo_Open()
+        {
+            FileInfo f = new FileInfo(@"C:\Test2.dat");
+            using(FileStream fs = f.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None))
+            {
+                // ...;
+            }
         }
 
 
