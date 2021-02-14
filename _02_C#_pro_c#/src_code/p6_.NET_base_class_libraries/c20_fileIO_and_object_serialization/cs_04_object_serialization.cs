@@ -133,6 +133,30 @@ namespace ObjectSerialization
 
             // customize Soap/Binary Serialization Process
             {
+                /*
+
+                + core types of System.Runtime.Serialization
+
+                    - ISerializable
+                    - ObjectIDGenerator
+
+                    - [OnDeserialized]
+                    - [OnDeserializing]
+
+                    - [OnSerialized]
+                    - [OnSerializing]
+
+                    - [OptionalField]
+
+                    - [SerializationInfo]
+
+
+                + a deeper look at object serialization
+                    1> the fully qualified name of the objects in the graph(i.e., MyApp.JamesBondCar)
+                    2> the name of the assembly defining the object graph(e.g., MyApp.exe)
+                    3> an instance of the SerializationInfo class that contains all stateful data maintained by the members in the object graph;
+
+                */
 
             }
 
@@ -213,6 +237,8 @@ namespace ObjectSerialization
             }
 
         }
+
+
 
 
 
