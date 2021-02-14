@@ -81,6 +81,89 @@ namespace ADO_NET
                 */
             }
 
+            // select additional ADO.NET-centric namespaces
+            {
+                /*
+
+                + Microsoft.SqlServer.Server
+
+                + System.Data
+
+                + System.Data.Common
+
+                + System.Data.Sql
+
+                + System.Data.SqlTypes
+
+
+                */
+            }
+
+
+            // core members of System.Data namespace
+            {
+                /*
+
+                + core members
+                    - Constraint
+
+                    - DataColumn
+                    - DataRow
+                    - DataSet
+                    - DataTable
+                    - DataView
+
+                    - DataRelation
+                    - DataTableReader
+
+
+                    // interface
+                    - IDataAdapter
+                    - IDataParameter
+                    - IDataReader
+                    - IDbCommand
+                    - IDbDataAdapter
+                    - IDbTransaction
+
+                */
+            }
+
+            // IDbConnection interface
+            {
+                /*
+
+                + definition
+                    ```c#
+
+                    namespace System.Data
+                    {
+                        public interface IDbConnection: IDispoable
+                        {
+                            string ConnectionString { get; set; }
+                            int ConnetionTimeout { get; }
+                            string Database { get; }
+                            ConnectionState State { get; }
+
+                            IDbTransaction BeginTransaction();
+                            IDbTransaction BeginTransaction(IsolationLevel il);
+                            void ChangeDatabase(string databaseName);
+                            void Close();
+                            IDbCommand CreateCommand();
+                            void Open();
+                        }
+                    }
+
+                    ```
+
+
+                */
+            }
+
+            // IDbTransaction interface
+            {
+
+            }
+
             return 0;
         }
 
