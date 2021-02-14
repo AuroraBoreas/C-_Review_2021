@@ -1,4 +1,7 @@
 using System;
+using static System.Console; // <-- laziness: Console.WriteLine(msg); => WriteLine(msg);
+
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.Odbc;
@@ -28,6 +31,18 @@ namespace AbstractDataUsingInterfaces
             return 0;
         }
 
+        static IDbConnection GetConnection(DataProvider dp)
+        {
+            IDbConnection conn = dp switch
+            {
+                DataProvider.SqlServer => new SqlConnection(),
+                DataProvider.OleDb => new OleDbConnection(),
+                DataProvider.Odbc => new OdbcConnection(),
+            };
+
+            return conn;
+        }
+
         static void VerySimpleConnectionFactory()
         {
             System.Console.WriteLine("***** Very Simple Connection Facotry *****\n");
@@ -39,6 +54,32 @@ namespace AbstractDataUsingInterfaces
             Console.ReadLine();
 
         }
+
+        static void VerySimpleConnectionFactory2()
+        {
+            System.Console.WriteLine("***** Very Simple Connection Facotry *****\n");
+
+            string dataProviderString = ConfigurationManager.AppSettings["provider"];
+
+            DataProvider dataProvider = DataProvider.None;
+            if(Enum.IsDefined(typeof(DataProvider), dataProviderString))
+            {
+                dataProvider = (dataProvider)Enum.Parse(typeof(DataProvider), dataProviderString);
+            }
+            else
+            {
+                System.Console.WriteLine("sorry, no provider exists!");
+                Console.ReadLine();
+                return;
+            }
+
+            IDbConnection myConnection = GetConnection(dataProvider);
+            System.Console.WriteLine($"Your connection is a {myConnection?.GetType().Name ?? "unrecognized type"}");
+
+            // open, use and close connection...
+            Console.ReadLine();
+        }
+
 
     }
 }
