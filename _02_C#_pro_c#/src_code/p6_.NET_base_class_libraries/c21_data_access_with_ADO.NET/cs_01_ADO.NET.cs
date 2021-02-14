@@ -161,7 +161,160 @@ namespace ADO_NET
 
             // IDbTransaction interface
             {
+                /*
 
+                + definition
+                    ```C#
+
+                    namespace System.Data
+                    {
+                        public interface IDbTransaction: IDisposable
+                        {
+                            IDbConnection Connection { get; }
+                            ISolationLevel ISolationLevel { get; }
+
+                            void Commit();
+                            void Rollback();
+                        }
+                    }
+
+                    ```
+                */
+            }
+
+            // IDbCommand interface
+            {
+                /*
+
+                + definition
+                    ```c#
+
+                    namespace System.Data
+                    {
+                        public interface IDbCommand: IDisposable
+                        {
+                            IDbConnection Connection { get; set; }
+                            IDbTransaction Transaction { get; set; }
+                            string CommandText { get; set; }
+                            int CommandTimeout { get; set; }
+                            CommandType CommandType { get; set; }
+
+                            IDataParameterCollection Parameters { get; }
+                            UpdateRowSource UpdateRowSource { get; set; }
+
+                            void Prepare();
+                            void Cancel();
+
+                            IDbDataParameter CreateParamter();
+                            int ExecutionNonQuery();
+                            IDataReader ExecuteReader();
+                            IDataReader ExecuteReader(CommandBehavior behavior);
+                            object ExecuteScalar();
+                        }
+                    }
+
+                    ```
+
+                */
+            }
+
+            // IDbDataParameter and IDataParameter interface
+            {
+                /*
+
+                + definition
+                    ```c#
+
+                    namespace System.Data
+                    {
+                        public interface IDbDataParameter: IDataParameter
+                        {
+                            byte Precision { get; set; }
+                            byte Scale { get; set; }
+                            int Size { get; set; }
+                        }
+
+                        public interface IDataParameter
+                        {
+                            DbType DbType { get; set; }
+                            ParameterDirection Direction { get; set; }
+                            bool IsNullable { get; }
+                            string ParameterName { get; set; }
+                            string SourceColum { get; set; }
+                            DataRowVersion SourceVersion { get; set; }
+
+                            object Value { get; set; }
+                        }
+                    }
+
+                    ```
+
+
+                */
+            }
+
+            // IDbDataAdapter and IDataAdapter interface
+            {
+                /*
+
+                + definition
+                    ```c#
+
+                    namespace System.Data
+                    {
+                        public interface IDbDataAdapter: IDataAdapter
+                        {
+                            IDbCommand SelectCommand { get; set; }
+                            IDbCommand InsertCommand { get; set; }
+                            IDbCommand UpdateCommand { get; set; }
+                            IDbCommand DeleteCommand { get; set; }
+                        }
+
+                        public interface IDataAdapter
+                        {
+                            MissingMappingAction MissingMappingAction { get; set; }
+                            MissingSchemaAction MissingSchemaAction { get; set; }
+                            ITableMappingCollection TableMappings { get; }
+
+                            DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType);
+                            int Fill(DataSet dataSet);
+                            IDataParameter[] GetFillParamters();
+                            int Update(DataSet dataSet);
+                        }
+                    }
+
+                    ```
+
+
+                */
+            }
+
+            // IDataReader and IDataRecord interface
+            {
+                /*
+
+                + definition
+                    ```c#
+
+                    namespace System.Data
+                    {
+                        public interface IDataReader: IDisposable, IDataRecord
+                        {
+                            int Depth { get; set; }
+                            bool IsClosed { get; }
+                            int RecordsAffected { get; }
+
+                            void Close();
+                            DataTable GetSchemaTable();
+                            bool NextResult();
+                            bool Read();
+                        }
+                    }
+
+                    ```
+
+
+                */
             }
 
             return 0;
