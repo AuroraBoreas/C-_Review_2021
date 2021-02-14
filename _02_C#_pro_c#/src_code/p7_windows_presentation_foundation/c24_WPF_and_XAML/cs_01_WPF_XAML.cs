@@ -18,7 +18,7 @@ namespace WPF_XAML
                     >> System.Windows.Forms.dll and System.Drawing.dll do NOT provide direct support for many additional technologies require to build a feature-rich desktop application;
 
 
-                + pre-WPF solutions to desired functionalities
+                + pre-WPF solutions to desired functionalities, "symmetrical"
 
                     | desired functionality                 | Technology                             |
                     |---------------------------------------|----------------------------------------|
@@ -32,6 +32,20 @@ namespace WPF_XAML
                     >> demrit
                         >> each technology requires a radically different mind-set;
                         >> it is difficult for a Wondows Forms programmer to master the diverse nature of each API;
+
+
+                + .NET3.0 solutions to desired functionalities, "symmetrical"
+
+                    | desired functionality                 | Technology                             |
+                    |---------------------------------------|----------------------------------------|
+                    | build windows with controls           | WPF                                    |
+                    | 2D graphics support                   | WPF                                    |
+                    | 3D graphics support                   | WPF                                    |
+                    | support for streaming video           | WPF                                    |
+                    | support for flow-style documents      | WPF                                    |
+
+
+
                 */
 
             }
