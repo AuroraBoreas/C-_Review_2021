@@ -1,0 +1,17 @@
+<!-- Dock menu system on the top -->
+<Menu DockPanel.Dock = "Top"
+HorizontalAlignment="Left" Background="White" BordeBrush="Black">
+
+    <MenuItem Header="_File">
+        <Seperator/>
+        <MenuItem Header="_Exit" MouseEnter="MouseEnterExitArea" MouseLeave="MouseLeaveArea" Clink="FileExit_Click"/>
+        </MenuItem>
+
+        <MenuItem Header="_Tools">
+            <MenuItem Header="_Spelling Hints" MouseEnter="MouseEnterToolsHintsArea" MouseLeave="MouseLeaveArea" Click="ToolsSpellingHints_Click" />
+
+
+
+    </MenuItem>
+
+</Menu>

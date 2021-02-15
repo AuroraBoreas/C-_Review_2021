@@ -1,0 +1,11 @@
+<Window x:Class="MyWPFApp.MainWindo"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="Fun with Panels!"
+Height="285"
+Width="325">
+
+    <Button x:Name="btnOK" Height="100" Width="80" Content="OK"/>
+
+
+</Window>
