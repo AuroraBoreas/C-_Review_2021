@@ -17,12 +17,30 @@ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <!--
 
         + do u see the pattern?
+        any property can use this "property-element syntax" pattern
+            ```xaml
+            <DefiningClass>
+                <DefiningClass.PropertyOnDefiningClass>
+                    value for property here!
+                </DefiningClass.PropertyOnDefiningClass>
+            </DefiningClass>
+            ```
 
-        <DefiningClass>
-            <DefiningClass.PropertyOnDefiningClass>
-                value for property here!
-            </DefiningClass.PropertyOnDefiningClass>
-        </DefiningClass>
+
+        + shorthand
+            ```xaml
+
+            <Button Height="50" Content="OK!" FontSize="20" Foreground="Yellow">
+
+                <Button.Width>
+                    100
+                </Button.Width>
+
+            </Button
+
+
+            ```
+
 
 
          -->

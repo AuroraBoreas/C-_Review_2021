@@ -1,0 +1,51 @@
+<Page
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:CorLib="clr-namespace:System;assembly=mscorlib">
+
+    <StackPanel>
+        <label Content="{x:Static CorLib:Environment.OSVersion}"></label>
+        <label Content="{x:Static CorLib:Environment.ProcessorCount}"></label>
+
+        <label Content="{x:Type Button}"></label>
+        <label Content="{x:Type CorLib:Boolean}"></label>
+
+        <ListBox Width="200" Height="50">
+            <ListBox.ItemSource>
+                <x:Array Type="CorLib:String">
+                    <CorLib:String>Sun Kil Moon</CorLib:String>
+                    <CorLib:String>Red House Painters</CorLib:String>
+                    <CorLib:String>Besnard Lakes</CorLib:String>
+                </x:Array>
+            </ListBox.ItemSource>
+        </ListBox>
+    </StackPanel>
+
+
+        <!--
+
+        markup extension
+
+        + what
+            - is similar with property-values(property-element syntax) to assignment value to property
+
+            - xaml provides another way(markup extension) to obtain the value of a property from a dedicated, external class;
+
+        + how
+            - a class that drives from MarkupExtension
+
+            ```xaml
+
+            <Element PropertyToSet = "{MarkupExtension}" />
+            ```
+
+        + note
+            - the chances of you ever needing to build a custom markup extension will be slim to none;
+
+            - a subset of XMAL kw(such as x:Array, x:Null, x:Static, x:Type) are markup extensions in disguise!
+
+
+
+         -->
+
+</Page>
