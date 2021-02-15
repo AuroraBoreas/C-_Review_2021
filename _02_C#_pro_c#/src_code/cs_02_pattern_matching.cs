@@ -117,7 +117,7 @@ namespace PatternMatching
             static decimal GetFuelCost(SuperHero hero)=>
             hero.MaxSpeed switch
             {
-                1 or 2 => 1.00m;
+                1 or 2 => 1.00m,
                 < 1_000 and <5_000 => 10.00m,
                 <= 10_000 => 7.00m,
                 _ => 12.00m,

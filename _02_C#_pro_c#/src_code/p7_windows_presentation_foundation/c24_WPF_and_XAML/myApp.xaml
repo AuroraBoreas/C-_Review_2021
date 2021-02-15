@@ -1,0 +1,11 @@
+
+<Button Height="80" Width="100" Content="OK" />
+
+<Button Height="80" Width="100">
+    <Button.Content>
+        <StackPanel>
+            <Ellipse Fill="Red" Width="25" Height="25" />
+            <Label Content="OK" />
+        </StackPanel>
+    </Button.Content>
+</Button>
