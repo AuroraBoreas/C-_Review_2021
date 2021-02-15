@@ -136,6 +136,27 @@ namespace WPF_XAML
                 // kaxaml, skip
             }
 
+            // XAML XML namespace and XAML "keywords"
+            {
+                /*
+
+                + what
+                    - the root element of a WPF XAML document(such as <Window>, <Page>, <UserControl>, or <Application> definition)
+
+                + rules of well-formed XML document(remember, XAML is an XML-based grammer)
+                    - the opening root element designates one XML ns as the primary namespace, which typically is the namespace that contains the most commonly used item;
+
+                    - if a root element requires the inclusion of additional secondary ns, they MUST be defined using a unique tag prefix(to resolve any possible name clashes);
+
+                    - as a convention, the prefix is simply x;
+
+                    - but this can be any unique token u require, such as XamlSpecificStuff;
+
+                    >> downside of defining wordy XML ns prefixes is u are required to type XamlSpecificStuff each time your XAML file needs to refer to one of the items defined within this XAML-centric XML ns;
+
+                */
+            }
+
 
 
 
