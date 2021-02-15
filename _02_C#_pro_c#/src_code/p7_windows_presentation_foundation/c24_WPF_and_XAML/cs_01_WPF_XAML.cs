@@ -154,6 +154,25 @@ namespace WPF_XAML
 
                     >> downside of defining wordy XML ns prefixes is u are required to type XamlSpecificStuff each time your XAML file needs to refer to one of the items defined within this XAML-centric XML ns;
 
+                + table of XAML keywords
+                    x: Array
+                    x: ClassModifier
+                    x: FieldModifier
+
+                    x: Key
+
+                    x: Name
+                    x: Class
+                    x: Code
+
+                    x: Null
+
+                    x: Static
+
+                    x: Type
+
+                    x:TypeArguments
+
                 */
             }
 

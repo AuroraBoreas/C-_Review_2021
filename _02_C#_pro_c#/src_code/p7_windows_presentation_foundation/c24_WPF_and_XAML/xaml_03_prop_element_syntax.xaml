@@ -1,0 +1,31 @@
+<Page
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <!-- Configure the look and feel of a Button -->
+        <Button Height="50" Width="100" Content="OK!" FontSize="20" Background="Green" Foreground="Yellow">
+            <Button.Background>
+                <linearGradientBrush>
+                    <GradientStop Color="DarkGreen" Offset="0"/>
+                    <GradientStop Color="LightGreen" Offset="1"/>
+                </linearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+        <!--
+
+        + do u see the pattern?
+
+        <DefiningClass>
+            <DefiningClass.PropertyOnDefiningClass>
+                value for property here!
+            </DefiningClass.PropertyOnDefiningClass>
+        </DefiningClass>
+
+
+         -->
+    </Grid>
+
+</Page>
