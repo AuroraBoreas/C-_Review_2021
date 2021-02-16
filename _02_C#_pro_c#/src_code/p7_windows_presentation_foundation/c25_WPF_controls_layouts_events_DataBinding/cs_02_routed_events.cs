@@ -6,8 +6,17 @@ namespace RoutedEvents
     {
         static int Main(string[] args)
         {
-            //
+            // Routed Events, 1076
             {
+                /*
+
+                + concept
+                    - it is similar with route(MVC) in Django web development
+
+
+                */
+
+
 
             }
 
@@ -19,7 +28,10 @@ namespace RoutedEvents
             return 0;
         }
 
-
+        public void btnClickMe_Clicked(object sender, RoutedEvents e)
+        {
+            System.Windows.Forms.MessageBox.Show("Clicked the button");
+        }
 
     }
 }

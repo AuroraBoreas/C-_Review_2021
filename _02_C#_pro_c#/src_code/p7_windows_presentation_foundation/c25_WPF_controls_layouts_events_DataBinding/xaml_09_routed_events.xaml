@@ -1,0 +1,15 @@
+<Button x:Name="btnClickMe"
+        Height="75"
+        Width="250"
+        Click="btnClickMe_Clicked">
+
+    <StackPanel Orientation="Horizontal">
+        <Label Height="50" FontSize="20">Fancy Button!</Label>
+        <Canvas Height="50" Width="100">
+            <Ellipse Name="outerEllipse" Fill="Green" Height="25" Width="50" Cursor="Hand" Canvas.Left="25" Canvas.Top="12"/>
+
+            <Ellipse Name="innerEllipse" Fill="Yellow" Height="15" Width="36" Canvas.Left="17" Canvas.Top="32"/>
+        </Canvas>
+    </StackPanel>
+
+</Button>
