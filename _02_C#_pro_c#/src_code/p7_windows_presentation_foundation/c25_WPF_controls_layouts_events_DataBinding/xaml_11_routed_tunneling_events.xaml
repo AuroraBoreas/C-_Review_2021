@@ -14,7 +14,8 @@
                      Cursor="Hand"
                      Canvas.Left="25"
                      Canvas.Top="12"
-                     MouseDown="outerEllipse_MouseDown"/>
+                     MouseDown="outerEllipse_MouseDown"
+                     PreviewMouseDown="outerEllipse_PreviewMouseDown"/>
 
             <Ellipse Name="innerEllipse"
                      Fill="Yellow"

@@ -1,0 +1,29 @@
+<Page
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Title="Fun with WPF APIs and Controls!"
+  Height="100"
+  Width="650">
+
+  <Button x:Name="btnMyButton"
+          Height="50"
+          Width="100"
+          Content="OK"/>
+
+  <!--
+
+    Height and Width properties inherit from FrameworkElement;
+
+    Content property inherits from ControlContent;
+
+    are all, in fact, "dependency properties"
+
+
+    + why define a term("dependecy property") for this concept?
+      - the answer lies in how a dependency property implemented within the class;
+
+
+
+   -->
+
+</Page>
