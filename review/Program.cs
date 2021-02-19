@@ -429,11 +429,12 @@ namespace review
             Console.WriteLine(mySet1.Count);    // 1,2,3,4,5,6,7,8
             foreach(int i in mySet1)
             {
-                Console.Write(i.ToString(), '\t');
+                Console.Write($"{i} ");
             }
             Console.WriteLine();
 
         }
+
 
 
     }
