@@ -1,0 +1,6 @@
+C:\Users\Aurora_Boreas\source\repos\review\bin\Debug\review.exe.config
+C:\Users\Aurora_Boreas\source\repos\review\bin\Debug\review.exe
+C:\Users\Aurora_Boreas\source\repos\review\bin\Debug\review.pdb
+C:\Users\Aurora_Boreas\source\repos\review\obj\Debug\review.csproj.CoreCompileInputs.cache
+C:\Users\Aurora_Boreas\source\repos\review\obj\Debug\review.exe
+C:\Users\Aurora_Boreas\source\repos\review\obj\Debug\review.pdb
