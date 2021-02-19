@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using System.Reflection;
+using System.Threading;
+using System.Diagnostics;
+using System.IO;
 
 using CarLibrary;
+using PersonLibrary;
 
 namespace review
 {
@@ -30,7 +33,7 @@ namespace review
         }
     }
 
-    public delegate int FuncName(int x, int y); // declare a delegate type(function pattern/signatures)
+    delegate int FuncName(int x, int y); // declare a delegate type(function pattern/signatures)
 
     class Program
     {
@@ -45,6 +48,7 @@ namespace review
             MyFunctions();
             Console.WriteLine();
 
+            // TODO: pattern match
             MyControlFlow();
             Console.WriteLine();
 
@@ -52,6 +56,30 @@ namespace review
             Console.WriteLine();
 
             MyCollections();
+            Console.WriteLine();
+
+            MyInterface();
+            Console.WriteLine();
+
+            MyClass_Pillars();
+            Console.WriteLine();
+
+            MyLinq();
+            Console.WriteLine();
+
+            MyFileIO();
+            Console.WriteLine();
+            
+            MyDateTime();
+            Console.WriteLine();
+            
+            MyRandom();
+            Console.WriteLine();
+            
+            MyThreading();
+            Console.WriteLine();
+            
+            MyFS();
             Console.WriteLine();
 
             Console.ReadLine();
@@ -97,7 +125,7 @@ namespace review
                 double d = 1.9999999999999999;
 
                 byte b = 12;
-                Boolean bl = false;
+                bool bl = false;
                 decimal de = 2.718m;
 
                 Console.WriteLine(c.ToString());
@@ -162,6 +190,13 @@ namespace review
 
             return res;
         }
+
+        private static void OutKeyword(Person p, out int number)
+        {
+            p.Age = 50;
+            number = 42;
+        }
+
         static void MyFunctions()
         {
             /*
@@ -180,6 +215,10 @@ namespace review
             * Predict<>; == Funct<, Boolean>
             * anonymouse function
             * lambda expr
+            * keywords
+                ** in   --> args with in cant be modified;
+                ** out  --> args with out MUST be modified;
+                ** ref  --> args with ref can be modified;
             
             ----
              
@@ -211,6 +250,13 @@ namespace review
             Func<int, int> g = new Func<int, int>(Factorial);
             g += Fibonacci;
             Console.WriteLine(g(6));    // 720, 
+
+            // out kw
+            Console.WriteLine("\nout keyword:");
+            Person p = new Person("LL", 30, "female", 31412, 31.00);
+            OutKeyword(p, out int a);
+            Console.WriteLine(p.Age);   // 50
+            Console.WriteLine(a);   // 42
         }
 
         static void MyStrings()
@@ -257,6 +303,8 @@ namespace review
             ----
             * ifelse
             * switchcase
+                ** pattern match
+                
             * trycatch            
             ----
 
@@ -310,6 +358,7 @@ namespace review
                     Console.WriteLine("I dont know");
                     break;
             }
+            // TODO: switch case Pattern match
 
             // try...catch...finally;
             var a = 10; var b = 0;
@@ -435,7 +484,183 @@ namespace review
 
         }
 
+        static void MyInterface()
+        {
+            /*
+            
+            [source, interface]
+            ----
+
+            * interface is an abstraction of class;
+            * interface vs class;
+
+            ----
+             
+            */
+            Console.WriteLine("\nInterface:");
+            CarCollection c = new CarCollection(3);
+            foreach(Car x in c)
+            {
+                Console.WriteLine(x.ToString());
+            }
+        }
+
+        static void MyClass_Pillars()
+        {
+            Console.WriteLine("\nClass inheritance:");
+
+            Person p1 = new Person() { Name = "ZL", Age = 34, Sex = "male", Account = 12345, State = 10_000 };
+            Person p2 = new Person() { Name = "LL", Age = 30, Sex = "female", Account = 345, State = 10_00 };
+
+            Console.WriteLine("p1: " + p1.ToString());
+            Console.WriteLine("p2: " + p2.ToString());
+            Console.WriteLine($"p1==p2: {p1==p2}");  // false
+        }
+
+        static void MyLinq()
+        {
+            int[] numbers = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            // raw
+            var res =
+                from number in numbers
+                where number%2 == 1
+                orderby number
+                select number;
+
+            // delegate anonymouse
+            var res1 = numbers.Where(delegate (int x) { return x % 2 == 1; }).Select(delegate (int x) { return x; });
+            // lambda
+            var res2 = numbers.Where((int x) => { return x % 2 == 1; }).Select((x) => x);
+            // lambda
+            var res3 = numbers.Where(x => x % 2 == 1).Select(x => x);
+
+            foreach (int r in res3)
+                Console.Write($"{r} ");
+            Console.WriteLine();
+
+        }
+
+        static void MyDateTime()
+        {
+            DateTime d = new DateTime();
+            // class-level
+            // now
+            Console.WriteLine(DateTime.Now);
+            Console.WriteLine(DateTime.UtcNow);
+            // today
+            Console.WriteLine(DateTime.Today);
+            // IsLeapYear
+            Console.WriteLine(DateTime.IsLeapYear(2021));
+            // minvalue
+            Console.WriteLine(DateTime.MinValue);
+            Console.WriteLine(DateTime.MaxValue);
+            // parse
+            DateTime.TryParse("2021/02/20", out DateTime result);
+            Console.WriteLine(result);
+            // instance-level
+            Console.WriteLine(d.Year);
+            Console.WriteLine(d.Month);
+            Console.WriteLine(d.Day);
+            Console.WriteLine(d.Hour);
+            Console.WriteLine(d.Minute);
+            Console.WriteLine(d.Second);
+            Console.WriteLine(d.DayOfWeek);
 
 
+            // Stopwatch
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            for(int i=0; i<10; ++i)
+            {
+                Thread.Sleep(1000);
+            }
+            timer.Stop();
+            Console.WriteLine("time elapsed: {0}",timer.ElapsedMilliseconds);
+        }
+
+        static void MyRandom()
+        {
+            Random rnd = new Random();
+            int start = 1, end = 20, res;
+            bool condi = true;
+
+            do
+            {
+                res = rnd.Next(start, end);
+                Console.Write("{0} ", res);
+                if (res % 2 == 1)
+                    condi = false;
+
+            } while (condi);
+
+            Console.WriteLine();
+        }
+
+        static void Worker1(object o)
+        {
+            Console.WriteLine("hello from Work1");
+            for (int i=0; i<10; ++i)
+            {
+                Console.WriteLine("work1 is working!");
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("work1 done!");
+         
+        }
+        static void Worker2(object o)
+        {
+            Console.WriteLine("hello from Work2");
+            for (int i = 0; i < 10; ++i)
+            {
+                Console.WriteLine("work2 is working!");
+                Thread.Sleep(2000);
+            }
+            Console.WriteLine("work2 done!");
+        }
+        static void Worker3(object o)
+        {
+            Console.WriteLine("hello from Work3");
+            for (int i = 0; i < 10; ++i)
+            {
+                Console.WriteLine("work3 is working!");
+                Thread.Sleep(3000);
+            }
+            Console.WriteLine("work2 done!");
+        }
+        static void MyThreading()
+        {
+            ThreadPool.QueueUserWorkItem(Worker1);
+            ThreadPool.QueueUserWorkItem(Worker2);
+            ThreadPool.QueueUserWorkItem(Worker3);
+            Console.WriteLine("hello from MyThreading");
+
+            Thread.Sleep(10);
+        }
+
+        static void MyFS()
+        {
+            string p = @"C:\Users\Aurora_Boreas\source\repos\review";
+            DirectoryInfo di = new DirectoryInfo(p);
+            Console.WriteLine(di.FullName);
+
+            foreach(DirectoryInfo d in di.GetDirectories())
+            {
+                Console.WriteLine(d.Name);
+            }
+
+        }
+
+        static void MyFileIO()
+        {
+            string p = @"C:\Users\Aurora_Boreas\source\repos\review\database.txt";
+            using (StreamReader sr = new StreamReader(p))
+            {
+                while(!sr.EndOfStream)
+                {
+                    Console.WriteLine(sr.ReadLine());
+                }
+            }
+        }
     }
 }

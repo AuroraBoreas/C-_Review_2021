@@ -1,12 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CarLibrary
 {
-    // delegate
+    public class CarCollection : IEnumerable
+    {
+        public List<Car> cars = new List<Car> { };
+
+        public CarCollection(int n)
+        {
+            for(int i=0; i < n; ++i)
+            {
+                cars.Add(new Car());
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return cars.GetEnumerator();
+        }
+    }
+
     public class EngineEventArgs
     {
         public string Info { get; }
@@ -25,6 +43,7 @@ namespace CarLibrary
         private bool IsEngineDead = false;
 
         // ctor
+        public Car() { }
         public Car(string name)
         : this(name, 0, 0, "")
         { }
@@ -69,6 +88,5 @@ namespace CarLibrary
 
     }
 
-    
 
 }
