@@ -46,5 +46,18 @@ namespace PersonLibrary
 
     }
 
+    public class SuperHero: Person
+    {
+        public int Speed { get; set; } = default;
+        public string City { get; set; } = default;
 
+        public SuperHero() { }
+
+        public SuperHero(string name, int age, string sex, int account, double state, int speed, string city)
+        : base(name, age, sex, account, state)
+        {
+            Speed = speed;
+            City = city;
+        }
+    }
 }

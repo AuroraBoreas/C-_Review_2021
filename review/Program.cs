@@ -48,7 +48,7 @@ namespace review
             MyFunctions();
             Console.WriteLine();
 
-            // TODO: pattern match
+            // TODO: pattern match, need C#>=8.0
             MyControlFlow();
             Console.WriteLine();
 
@@ -78,7 +78,10 @@ namespace review
             
             MyThreading();
             Console.WriteLine();
-            
+
+            MyTPL();
+            Console.WriteLine();
+
             MyFS();
             Console.WriteLine();
 
@@ -359,6 +362,7 @@ namespace review
                     break;
             }
             // TODO: switch case Pattern match
+            // >= C#8.0
 
             // try...catch...finally;
             var a = 10; var b = 0;
@@ -600,7 +604,7 @@ namespace review
         static void Worker1(object o)
         {
             Console.WriteLine("hello from Work1");
-            for (int i=0; i<10; ++i)
+            for (int i=0; i<3; ++i)
             {
                 Console.WriteLine("work1 is working!");
                 Thread.Sleep(1000);
@@ -611,7 +615,7 @@ namespace review
         static void Worker2(object o)
         {
             Console.WriteLine("hello from Work2");
-            for (int i = 0; i < 10; ++i)
+            for (int i = 0; i < 3; ++i)
             {
                 Console.WriteLine("work2 is working!");
                 Thread.Sleep(2000);
@@ -621,7 +625,7 @@ namespace review
         static void Worker3(object o)
         {
             Console.WriteLine("hello from Work3");
-            for (int i = 0; i < 10; ++i)
+            for (int i = 0; i < 3; ++i)
             {
                 Console.WriteLine("work3 is working!");
                 Thread.Sleep(3000);
@@ -635,7 +639,7 @@ namespace review
             ThreadPool.QueueUserWorkItem(Worker3);
             Console.WriteLine("hello from MyThreading");
 
-            Thread.Sleep(10);
+            Thread.Sleep(1000);
         }
 
         static void MyFS()
@@ -661,6 +665,34 @@ namespace review
                     Console.WriteLine(sr.ReadLine());
                 }
             }
+        }
+        static void DoImportantStuff(int time, int no)
+        {
+            Console.WriteLine("hello from DoImportantStuff {0}", no);
+            for (int i=0; i<3; ++i)
+            {
+                Thread.Sleep(time);
+            }
+            Console.WriteLine("DoImportantStuff {0} finished", no);
+        }
+        static void MyTPL()
+        {
+            Task.Factory.StartNew(() =>
+            {
+                DoImportantStuff(1000, 1);
+            });
+
+            Task.Factory.StartNew(() =>
+            {
+                DoImportantStuff(2000, 2);
+            });
+
+            Task.Factory.StartNew(() =>
+            {
+                DoImportantStuff(1000, 3);
+            });
+
+            Console.WriteLine("hello from MyTPL");
         }
     }
 }
