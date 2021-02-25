@@ -1,0 +1,6 @@
+C:\Users\admin panel-Design\Documents\Visual Studio 2015\Projects\CsharpInOneDay\csharp_review\csharp_review\bin\Debug\csharp_review.exe.config
+C:\Users\admin panel-Design\Documents\Visual Studio 2015\Projects\CsharpInOneDay\csharp_review\csharp_review\bin\Debug\csharp_review.exe
+C:\Users\admin panel-Design\Documents\Visual Studio 2015\Projects\CsharpInOneDay\csharp_review\csharp_review\bin\Debug\csharp_review.pdb
+C:\Users\admin panel-Design\Documents\Visual Studio 2015\Projects\CsharpInOneDay\csharp_review\csharp_review\obj\Debug\csharp_review.csprojResolveAssemblyReference.cache
+C:\Users\admin panel-Design\Documents\Visual Studio 2015\Projects\CsharpInOneDay\csharp_review\csharp_review\obj\Debug\csharp_review.exe
+C:\Users\admin panel-Design\Documents\Visual Studio 2015\Projects\CsharpInOneDay\csharp_review\csharp_review\obj\Debug\csharp_review.pdb
